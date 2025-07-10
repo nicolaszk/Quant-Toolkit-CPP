@@ -1,0 +1,776 @@
+Analysis of sampling main (pid 74591) every 1 millisecond
+Process:         main [74591]
+Path:            /Users/USER/Desktop/*/main
+Load Address:    0x102c00000
+Identifier:      main
+Version:         0
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  zsh [50460]
+
+Date/Time:       2025-07-10 13:53:31.181 -0300
+Launch Time:     2025-07-10 13:53:30.816 -0300
+OS Version:      macOS 15.3 (24D60)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+----
+
+Call graph:
+    1942 Thread_3139408   DispatchQueue_1: com.apple.main-thread  (serial)
+      1942 start  (in dyld) + 2840  [0x184348274]
+        1869 main  (in main) + 96  [0x102c00d28]  main.cpp:16
+        + 924 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 428  [0x102c02cf8]  CsvReader.cpp:37
+        + ! 913 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&)  (in main) + 76  [0x102c03230]  istream:1297
+        + ! : 268 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 384  [0x102c049f0]  istream:1273
+        + ! : | 86 std::basic_string<char>::max_size[abi:ne190102]() const  (in main) + 24  [0x102c04bec]  string:1290
+        + ! : | + 57 std::basic_string<char>::__alloc[abi:ne190102]() const  (in main) + 24  [0x102c04e7c]  string:1951
+        + ! : | + ! 33 std::__compressed_pair<std::basic_string<char>::__rep>::second[abi:ne190102]() const  (in main) + 24  [0x102c04ec8]  compressed_pair.h:142
+        + ! : | + ! : 33 std::__compressed_pair_elem<std::allocator<char>, 1, true>::__get[abi:ne190102]() const  (in main) + 8,0  [0x102c04edc,0x102c04ed4]  compressed_pair.h:92
+        + ! : | + ! 15 std::__compressed_pair<std::basic_string<char>::__rep>::second[abi:ne190102]() const  (in main) + 24  [0x102c04ec8]  compressed_pair.h:142
+        + ! : | + ! 9 std::__compressed_pair<std::basic_string<char>::__rep>::second[abi:ne190102]() const  (in main) + 0  [0x102c04eb0]  compressed_pair.h:141
+        + ! : | + 29 std::basic_string<char>::__alloc[abi:ne190102]() const  (in main) + 0,24  [0x102c04e64,0x102c04e7c]  string:1951
+        + ! : | 65 std::basic_string<char>::max_size[abi:ne190102]() const  (in main) + 28  [0x102c04bf0]  string:1290
+        + ! : | + 26 std::allocator_traits<std::allocator<char>>::max_size[abi:ne190102]<std::allocator<char>, 0>(std::allocator<char> const&)  (in main) + 24  [0x102c04e58]  allocator_traits.h:345
+        + ! : | + ! 26 std::allocator<char>::max_size[abi:ne190102]() const  (in main) + 4  [0x102c04ea0]  allocator.h:159
+        + ! : | + 24 std::allocator_traits<std::allocator<char>>::max_size[abi:ne190102]<std::allocator<char>, 0>(std::allocator<char> const&)  (in main) + 4  [0x102c064b8]
+        + ! : | + 15 std::allocator_traits<std::allocator<char>>::max_size[abi:ne190102]<std::allocator<char>, 0>(std::allocator<char> const&)  (in main) + 24  [0x102c04e58]  allocator_traits.h:345
+        + ! : | 55 std::basic_string<char>::max_size[abi:ne190102]() const  (in main) + 44  [0x102c04c00]  string:1291
+        + ! : | + 39 std::numeric_limits<unsigned long>::max[abi:ne190102]()  (in main) + 12  [0x102c04e94]  limits:469
+        + ! : | + ! 39 std::__libcpp_numeric_limits<unsigned long, true>::max[abi:ne190102]()  (in main) + 0  [0x102c04ee8]  limits:202
+        + ! : | + 16 std::numeric_limits<unsigned long>::max[abi:ne190102]()  (in main) + 12  [0x102c04e94]  limits:469
+        + ! : | 34 std::basic_string<char>::max_size[abi:ne190102]() const  (in main) + 156,152  [0x102c04c70,0x102c04c6c]  string:1297
+        + ! : | 16 std::basic_string<char>::max_size[abi:ne190102]() const  (in main) + 44  [0x102c04c00]  string:1291
+        + ! : | 12 std::basic_string<char>::max_size[abi:ne190102]() const  (in main) + 88  [0x102c04c2c]  string:1295
+        + ! : 196 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 372  [0x102c049e4]  istream:1273
+        + ! : | 86 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 28  [0x102c04b9c]  string:1285
+        + ! : | + 57 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 24  [0x102c02674]  string:1881
+        + ! : | + ! 30 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : | + ! : 30 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 8,0  [0x102c0270c,0x102c02704]  compressed_pair.h:63
+        + ! : | + ! 14 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : | + ! 13 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 0  [0x102c026e0]  compressed_pair.h:133
+        + ! : | + 18 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 40  [0x102c02684]  string:1881
+        + ! : | + 11 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 0  [0x102c0265c]  string:1877
+        + ! : | 70 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 44  [0x102c04bac]  string:1285
+        + ! : | + 58 std::basic_string<char>::__get_long_size[abi:ne190102]() const  (in main) + 24  [0x102c04dfc]  string:1970
+        + ! : | + ! 36 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : | + ! : 36 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 8,0  [0x102c0270c,0x102c02704]  compressed_pair.h:63
+        + ! : | + ! 16 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : | + ! 6 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 0  [0x102c026e0]  compressed_pair.h:133
+        + ! : | + 12 std::basic_string<char>::__get_long_size[abi:ne190102]() const  (in main) + 28  [0x102c04e00]  string:1970
+        + ! : | 40 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 72,28  [0x102c04bc8,0x102c04b9c]  string:1285
+        + ! : 105 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 124  [0x102c048ec]  istream:1263
+        + ! : | 31 std::basic_streambuf<char>::sbumpc[abi:ne190102]()  (in main) + 104  [0x102c03ac8]  streambuf:190
+        + ! : | 28 std::basic_streambuf<char>::sbumpc[abi:ne190102]()  (in main) + 92  [0x102c03abc]  streambuf:189
+        + ! : | + 28 std::char_traits<char>::to_int_type[abi:ne190102](char)  (in main) + 8  [0x102c03a3c]  char_traits.h:265
+        + ! : | 24 std::basic_streambuf<char>::sbumpc[abi:ne190102]()  (in main) + 28  [0x102c03a7c]  streambuf:187
+        + ! : | 11 std::basic_streambuf<char>::sbumpc[abi:ne190102]()  (in main) + 0  [0x102c03a60]  streambuf:186
+        + ! : | 11 std::basic_streambuf<char>::sbumpc[abi:ne190102]()  (in main) + 60  [0x102c03a9c]  streambuf:188
+        + ! : |   11 std::basic_streambuf<char>::uflow()  (in libc++.1.dylib) + 56  [0x184601e84]
+        + ! : |     11 std::basic_filebuf<char>::underflow()  (in libc++.1.dylib) + 256  [0x18461157c]
+        + ! : |       11 fread  (in libsystem_c.dylib) + 148  [0x184570698]
+        + ! : |         9 __fread  (in libsystem_c.dylib) + 504  [0x184567d8c]
+        + ! : |         ! 9 __srefill1  (in libsystem_c.dylib) + 36  [0x184567acc]
+        + ! : |         !   9 _sread  (in libsystem_c.dylib) + 32  [0x184567b38]
+        + ! : |         !     9 __sread  (in libsystem_c.dylib) + 24  [0x18458acbc]
+        + ! : |         !       9 __read_nocancel  (in libsystem_kernel.dylib) + 8  [0x184688e60]
+        + ! : |         2 __fread  (in libsystem_c.dylib) + 252  [0x184567c90]
+        + ! : |           2 _platform_memmove  (in libsystem_platform.dylib) + 180,204  [0x1846feac4,0x1846feadc]
+        + ! : 59 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 108  [0x102c048dc]  istream:1263
+        + ! : | 33 std::basic_ios<char>::rdbuf[abi:ne190102]() const  (in main) + 24  [0x102c027d0]  ios:662
+        + ! : | + 33 std::ios_base::rdbuf[abi:ne190102]() const  (in main) + 12,0  [0x102c027e8,0x102c027dc]  ios:370
+        + ! : | 15 std::basic_ios<char>::rdbuf[abi:ne190102]() const  (in main) + 0  [0x102c027b8]  ios:661
+        + ! : | 11 std::basic_ios<char>::rdbuf[abi:ne190102]() const  (in main) + 24  [0x102c027d0]  ios:662
+        + ! : 48 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 360  [0x102c049d8]  istream:1272
+        + ! : | 31 DYLD-STUB$$std::basic_string<char>::push_back(char)  (in main) + 4  [0x102c063a4]
+        + ! : | 17 std::basic_string<char>::push_back(char)  (in libc++.1.dylib) + 28  [0x1845f6ebc]
+        + ! : 39 std::basic_string<char>::push_back(char)  (in libc++.1.dylib) + 164,160  [0x1845f6f44,0x1845f6f40]
+        + ! : 35 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 152  [0x102c04908]  istream:1264
+        + ! : | 35 std::char_traits<char>::eof[abi:ne190102]()  (in main) + 0  [0x102c028e4]  char_traits.h:270
+        + ! : 31 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 336  [0x102c049c0]  istream:1270
+        + ! : | 31 std::char_traits<char>::eq(char, char)  (in main) + 16  [0x102c04b6c]  char_traits.h:197
+        + ! : 26 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 164  [0x102c04914]  istream:1264
+        + ! : | 26 std::char_traits<char>::eq_int_type[abi:ne190102](int, int)  (in main) + 16  [0x102c039b4]  char_traits.h:268
+        + ! : 22 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 320  [0x102c049b0]  istream:1269
+        + ! : | 22 std::char_traits<char>::to_char_type[abi:ne190102](int)  (in main) + 8  [0x102c04b4c]  char_traits.h:262
+        + ! : 22 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 336,340  [0x102c049c0,0x102c049c4]  istream:1270
+        + ! : 15 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 88  [0x102c048c8]  istream:1263
+        + ! : 13 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 76  [0x102c048bc]  istream:1260
+        + ! : | 6 std::basic_string<char>::clear[abi:ne190102]()  (in main) + 28  [0x102c04acc]  string:3288
+        + ! : | + 2 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 28  [0x102c04b9c]  string:1285
+        + ! : | + ! 1 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 4  [0x102c02660]  string:1877
+        + ! : | + ! 1 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 40  [0x102c02684]  string:1881
+        + ! : | + 2 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 44  [0x102c04bac]  string:1285
+        + ! : | + ! 1 std::basic_string<char>::__get_long_size[abi:ne190102]() const  (in main) + 24  [0x102c04dfc]  string:1970
+        + ! : | + ! : 1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : | + ! :   1 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 8  [0x102c0270c]  compressed_pair.h:63
+        + ! : | + ! 1 std::basic_string<char>::__get_long_size[abi:ne190102]() const  (in main) + 28  [0x102c04e00]  string:1970
+        + ! : | + 1 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 0  [0x102c04b80]  string:1284
+        + ! : | + 1 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 72  [0x102c04bc8]  string:1285
+        + ! : | 3 std::basic_string<char>::clear[abi:ne190102]()  (in main) + 84  [0x102c04b04]  string:3291
+        + ! : | + 2 std::basic_string<char>::__set_long_size[abi:ne190102](unsigned long)  (in main) + 36  [0x102c04d44]  string:1967
+        + ! : | + ! 2 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]()  (in main) + 24  [0x102c02730]  compressed_pair.h:130
+        + ! : | + !   2 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]()  (in main) + 0,8  [0x102c0273c,0x102c02744]  compressed_pair.h:62
+        + ! : | + 1 std::basic_string<char>::__set_long_size[abi:ne190102](unsigned long)  (in main) + 36  [0x102c04d44]  string:1967
+        + ! : | 1 std::basic_string<char>::clear[abi:ne190102]()  (in main) + 44  [0x102c04adc]  string:3289
+        + ! : | + 1 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 24  [0x102c02674]  string:1881
+        + ! : | +   1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : | +     1 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 4  [0x102c02708]  compressed_pair.h:63
+        + ! : | 1 std::basic_string<char>::clear[abi:ne190102]()  (in main) + 44  [0x102c04adc]  string:3289
+        + ! : | 1 std::basic_string<char>::clear[abi:ne190102]()  (in main) + 72  [0x102c04af8]  string:3290
+        + ! : | + 1 std::char_traits<char>::assign[abi:ne190102](char&, char const&)  (in main) + 24  [0x102c04d14]  char_traits.h:192
+        + ! : | 1 std::basic_string<char>::clear[abi:ne190102]()  (in main) + 136  [0x102c04b38]  string:3296
+        + ! : |   1 std::basic_string<char>::__annotate_shrink[abi:ne190102](unsigned long) const  (in main) + 8  [0x102c04dd8]  string:2050
+        + ! : 13 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 388  [0x102c049f4]  istream:1273
+        + ! : 8 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 360  [0x102c049d8]  istream:1272
+        + ! : 7 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 164  [0x102c04914]  istream:1264
+        + ! : 2 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 508  [0x102c04a6c]  istream:1289
+        + ! : | 2 std::basic_ios<char>::setstate[abi:ne190102](unsigned int)  (in main) + 32  [0x102c024b8]  ios:579
+        + ! : |   1 std::ios_base::setstate[abi:ne190102](unsigned int)  (in main) + 40  [0x102c02974]  ios:505
+        + ! : |   + 1 DYLD-STUB$$std::ios_base::clear(unsigned int)  (in main) + 4  [0x102c06524]
+        + ! : |   1 std::ios_base::setstate[abi:ne190102](unsigned int)  (in main) + 0  [0x102c0294c]  ios:505
+        + ! : 1 std::basic_istream<char>::sentry::sentry(std::basic_istream<char>&, bool)  (in libc++.1.dylib) + 536  [0x18460248c]
+        + ! : 1 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 424  [0x102c04a18]  istream:1278
+        + ! : 1 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 452  [0x102c04a34]  istream:1281
+        + ! : 1 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main) + 520  [0x102c04a78]  istream:1291
+        + ! 10 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&)  (in main) + 60  [0x102c03220]  istream:1297
+        + ! : 4 std::basic_ios<char>::widen[abi:ne190102](char) const  (in main) + 64  [0x102c0286c]  ios:689
+        + ! : | 4 std::ctype<char>::widen[abi:ne190102](char) const  (in main) + 32,12,...  [0x102c02938,0x102c02924,...]  __locale:571
+        + ! : 3 std::basic_ios<char>::widen[abi:ne190102](char) const  (in main) + 36  [0x102c02850]  ios:689
+        + ! : | 2 std::locale::locale(std::locale const&)  (in libc++.1.dylib) + 4  [0x18462bfcc]
+        + ! : | 1 DYLD-STUB$$std::ios_base::getloc() const  (in main) + 8  [0x102c0636c]
+        + ! : 2 std::basic_ios<char>::widen[abi:ne190102](char) const  (in main) + 72  [0x102c02874]  ios:689
+        + ! : 1 std::basic_ios<char>::widen[abi:ne190102](char) const  (in main) + 44  [0x102c02858]  ios:689
+        + ! :   1 const& std::use_facet[abi:ne190102]<std::ctype<char>>(std::locale const&)  (in main) + 32  [0x102c0290c]  __locale:174
+        + ! :     1 std::locale::use_facet(std::locale::id&) const  (in libc++.1.dylib) + 28  [0x18462c818]
+        + ! :       1 std::locale::id::__get()  (in libc++.1.dylib) + 28  [0x18462c7ac]
+        + ! 1 std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&)  (in main) + 0  [0x102c031e4]  istream:1296
+        + 598 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 188  [0x102c02c08]  CsvReader.cpp:25
+        + ! 598 count_lines(std::basic_ifstream<char>&)  (in main) + 84  [0x102c02a3c]  CsvReader.cpp:13
+        + !   598 std::iterator_traits<std::istreambuf_iterator<char>>::difference_type std::count[abi:ne190102]<std::istreambuf_iterator<char>, char>(std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char const&)  (in main) + 60  [0x102c02ab4]  count.h:85
+        + !     311 std::_IterOps<std::_ClassicAlgPolicy>::__difference_type<std::istreambuf_iterator<char>> std::__count[abi:ne190102]<std::_ClassicAlgPolicy, std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char, std::__identity>(std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char const&, std::__identity&)  (in main) + 48  [0x102c037c0]  count.h:37
+        + !     : 297 std::operator!=[abi:ne190102]<char>(std::istreambuf_iterator<char> const&, std::istreambuf_iterator<char> const&)  (in main) + 32  [0x102c03854]  istreambuf_iterator.h:103
+        + !     : | 193 std::istreambuf_iterator<char>::equal[abi:ne190102](std::istreambuf_iterator<char> const&) const  (in main) + 28  [0x102c03908]  istreambuf_iterator.h:83
+        + !     : | + 81 std::istreambuf_iterator<char>::__test_for_eof[abi:ne190102]() const  (in main) + 48  [0x102c03960]  istreambuf_iterator.h:61
+        + !     : | + ! 25 std::basic_streambuf<char>::sgetc[abi:ne190102]()  (in main) + 96  [0x102c03a28]  streambuf:196
+        + !     : | + ! 23 std::basic_streambuf<char>::sgetc[abi:ne190102]()  (in main) + 84  [0x102c03a1c]  streambuf:195
+        + !     : | + ! : 23 std::char_traits<char>::to_int_type[abi:ne190102](char)  (in main) + 8  [0x102c03a3c]  char_traits.h:265
+        + !     : | + ! 19 std::basic_streambuf<char>::sgetc[abi:ne190102]()  (in main) + 28,24  [0x102c039e4,0x102c039e0]  streambuf:193
+        + !     : | + ! 14 std::basic_streambuf<char>::sgetc[abi:ne190102]()  (in main) + 60  [0x102c03a04]  streambuf:194
+        + !     : | + !   13 std::basic_filebuf<char>::underflow()  (in libc++.1.dylib) + 256  [0x18461157c]
+        + !     : | + !   | 13 fread  (in libsystem_c.dylib) + 148  [0x184570698]
+        + !     : | + !   |   13 __fread  (in libsystem_c.dylib) + 504  [0x184567d8c]
+        + !     : | + !   |     13 __srefill1  (in libsystem_c.dylib) + 36  [0x184567acc]
+        + !     : | + !   |       13 _sread  (in libsystem_c.dylib) + 32  [0x184567b38]
+        + !     : | + !   |         13 __sread  (in libsystem_c.dylib) + 24  [0x18458acbc]
+        + !     : | + !   |           13 __read_nocancel  (in libsystem_kernel.dylib) + 8  [0x184688e60]
+        + !     : | + !   1 std::basic_filebuf<char>::underflow()  (in libc++.1.dylib) + 220  [0x184611558]
+        + !     : | + !     1 _platform_memmove  (in libsystem_platform.dylib) + 452  [0x1846febd4]
+        + !     : | + 48 std::istreambuf_iterator<char>::__test_for_eof[abi:ne190102]() const  (in main) + 24,68  [0x102c03948,0x102c03974]  istreambuf_iterator.h:61
+        + !     : | + 25 std::istreambuf_iterator<char>::__test_for_eof[abi:ne190102]() const  (in main) + 56  [0x102c03968]  istreambuf_iterator.h:61
+        + !     : | + ! 25 std::char_traits<char>::eof[abi:ne190102]()  (in main) + 0  [0x102c028e4]  char_traits.h:270
+        + !     : | + 22 std::istreambuf_iterator<char>::__test_for_eof[abi:ne190102]() const  (in main) + 68  [0x102c03974]  istreambuf_iterator.h:61
+        + !     : | + ! 22 std::char_traits<char>::eq_int_type[abi:ne190102](int, int)  (in main) + 16  [0x102c039b4]  char_traits.h:268
+        + !     : | + 10 std::istreambuf_iterator<char>::__test_for_eof[abi:ne190102]() const  (in main) + 0  [0x102c03930]  istreambuf_iterator.h:60
+        + !     : | + 7 std::istreambuf_iterator<char>::__test_for_eof[abi:ne190102]() const  (in main) + 104  [0x102c03998]  istreambuf_iterator.h:63
+        + !     : | 76 std::istreambuf_iterator<char>::equal[abi:ne190102](std::istreambuf_iterator<char> const&) const  (in main) + 40  [0x102c03914]  istreambuf_iterator.h:83
+        + !     : | + 32 std::istreambuf_iterator<char>::__test_for_eof[abi:ne190102]() const  (in main) + 24  [0x102c03948]  istreambuf_iterator.h:61
+        + !     : | + 28 std::istreambuf_iterator<char>::__test_for_eof[abi:ne190102]() const  (in main) + 104  [0x102c03998]  istreambuf_iterator.h:63
+        + !     : | + 16 std::istreambuf_iterator<char>::__test_for_eof[abi:ne190102]() const  (in main) + 88  [0x102c03988]  istreambuf_iterator.h:0
+        + !     : | 15 std::istreambuf_iterator<char>::equal[abi:ne190102](std::istreambuf_iterator<char> const&) const  (in main) + 0  [0x102c038ec]  istreambuf_iterator.h:82
+        + !     : | 13 std::istreambuf_iterator<char>::equal[abi:ne190102](std::istreambuf_iterator<char> const&) const  (in main) + 56  [0x102c03924]  istreambuf_iterator.h:83
+        + !     : 10 std::operator!=[abi:ne190102]<char>(std::istreambuf_iterator<char> const&, std::istreambuf_iterator<char> const&)  (in main) + 0  [0x102c03834]  istreambuf_iterator.h:102
+        + !     : 4 std::operator!=[abi:ne190102]<char>(std::istreambuf_iterator<char> const&, std::istreambuf_iterator<char> const&)  (in main) + 36  [0x102c03858]  istreambuf_iterator.h:103
+        + !     113 std::_IterOps<std::_ClassicAlgPolicy>::__difference_type<std::istreambuf_iterator<char>> std::__count[abi:ne190102]<std::_ClassicAlgPolicy, std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char, std::__identity>(std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char const&, std::__identity&)  (in main) + 144  [0x102c03820]  count.h:37
+        + !     : 85 std::istreambuf_iterator<char>::operator++[abi:ne190102]()  (in main) + 32  [0x102c038dc]  istreambuf_iterator.h:77
+        + !     : | 29 std::basic_streambuf<char>::sbumpc[abi:ne190102]()  (in main) + 104  [0x102c03ac8]  streambuf:190
+        + !     : | 26 std::basic_streambuf<char>::sbumpc[abi:ne190102]()  (in main) + 92  [0x102c03abc]  streambuf:189
+        + !     : | + 26 std::char_traits<char>::to_int_type[abi:ne190102](char)  (in main) + 8  [0x102c03a3c]  char_traits.h:265
+        + !     : | 18 std::basic_streambuf<char>::sbumpc[abi:ne190102]()  (in main) + 28  [0x102c03a7c]  streambuf:187
+        + !     : | 12 std::basic_streambuf<char>::sbumpc[abi:ne190102]()  (in main) + 0  [0x102c03a60]  streambuf:186
+        + !     : 18 std::istreambuf_iterator<char>::operator++[abi:ne190102]()  (in main) + 36  [0x102c038e0]  istreambuf_iterator.h:78
+        + !     : 10 std::istreambuf_iterator<char>::operator++[abi:ne190102]()  (in main) + 0  [0x102c038bc]  istreambuf_iterator.h:76
+        + !     105 std::_IterOps<std::_ClassicAlgPolicy>::__difference_type<std::istreambuf_iterator<char>> std::__count[abi:ne190102]<std::_ClassicAlgPolicy, std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char, std::__identity>(std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char const&, std::__identity&)  (in main) + 72  [0x102c037d8]  count.h:38
+        + !     : 78 std::istreambuf_iterator<char>::operator*[abi:ne190102]() const  (in main) + 28  [0x102c038ac]  istreambuf_iterator.h:75
+        + !     : | 33 std::basic_streambuf<char>::sgetc[abi:ne190102]()  (in main) + 28  [0x102c039e4]  streambuf:193
+        + !     : | 24 std::basic_streambuf<char>::sgetc[abi:ne190102]()  (in main) + 84  [0x102c03a1c]  streambuf:195
+        + !     : | + 24 std::char_traits<char>::to_int_type[abi:ne190102](char)  (in main) + 8  [0x102c03a3c]  char_traits.h:265
+        + !     : | 17 std::basic_streambuf<char>::sgetc[abi:ne190102]()  (in main) + 96  [0x102c03a28]  streambuf:196
+        + !     : | 4 std::basic_streambuf<char>::sgetc[abi:ne190102]()  (in main) + 0  [0x102c039c8]  streambuf:192
+        + !     : 27 std::istreambuf_iterator<char>::operator*[abi:ne190102]() const  (in main) + 32,20  [0x102c038b0,0x102c038a4]  istreambuf_iterator.h:75
+        + !     44 std::_IterOps<std::_ClassicAlgPolicy>::__difference_type<std::istreambuf_iterator<char>> std::__count[abi:ne190102]<std::_ClassicAlgPolicy, std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char, std::__identity>(std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char const&, std::__identity&)  (in main) + 92  [0x102c037ec]  count.h:38
+        + !     : 24 decltype(std::declval<std::__identity&>()(std::declval<char>())) std::__invoke[abi:ne190102]<std::__identity&, char>(std::__identity&, char&&)  (in main) + 24,32  [0x102c0387c,0x102c03884]  invoke.h:149
+        + !     : 20 decltype(std::declval<std::__identity&>()(std::declval<char>())) std::__invoke[abi:ne190102]<std::__identity&, char>(std::__identity&, char&&)  (in main) + 32  [0x102c03884]  invoke.h:149
+        + !     :   20 std::__identity::operator()[abi:ne190102]<char>(char&&) const  (in main) + 12  [0x102c03a54]  identity.h:30
+        + !     20 std::_IterOps<std::_ClassicAlgPolicy>::__difference_type<std::istreambuf_iterator<char>> std::__count[abi:ne190102]<std::_ClassicAlgPolicy, std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char, std::__identity>(std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char const&, std::__identity&)  (in main) + 100,112  [0x102c037f4,0x102c03800]  count.h:38
+        + !     4 std::_IterOps<std::_ClassicAlgPolicy>::__difference_type<std::istreambuf_iterator<char>> std::__count[abi:ne190102]<std::_ClassicAlgPolicy, std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char, std::__identity>(std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char const&, std::__identity&)  (in main) + 48,136  [0x102c037c0,0x102c03818]  count.h:37
+        + !     1 std::_IterOps<std::_ClassicAlgPolicy>::__difference_type<std::istreambuf_iterator<char>> std::__count[abi:ne190102]<std::_ClassicAlgPolicy, std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char, std::__identity>(std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char const&, std::__identity&)  (in main) + 116  [0x102c03804]  count.h:39
+        + 96 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 500  [0x102c02d40]  CsvReader.cpp:39
+        + ! 41 std::vector<std::basic_string<char>>::reserve(unsigned long)  (in main) + 152  [0x102c0334c]  vector:1468
+        + ! : 39 std::__split_buffer<std::basic_string<char>>::__split_buffer(unsigned long, unsigned long)  (in main) + 52  [0x102c05178]  __split_buffer:349
+        + ! : | 32 std::__split_buffer<std::basic_string<char>>::__split_buffer(unsigned long, unsigned long)  (in main) + 104  [0x102c053d4]  __split_buffer:353
+        + ! : | + 31 std::__allocate_at_least[abi:ne190102]<std::allocator<std::basic_string<char>>>(std::allocator<std::basic_string<char>>&, unsigned long)  (in main) + 32  [0x102c054a0]  allocate_at_least.h:41
+        + ! : | + ! 24 std::allocator<std::basic_string<char>>::allocate[abi:ne190102](unsigned long)  (in main) + 76  [0x102c055c4]  allocator.h:118
+        + ! : | + ! : 18 std::__libcpp_allocate[abi:ne190102](unsigned long, unsigned long)  (in main) + 72  [0x102c044c8]  new:321
+        + ! : | + ! : | 16 std::__libcpp_operator_new[abi:ne190102]<unsigned long>(unsigned long)  (in main) + 24  [0x102c04524]  new:297
+        + ! : | + ! : | + 15 operator new(unsigned long)  (in libc++abi.dylib) + 52  [0x18468236c]
+        + ! : | + ! : | + ! 11 nanov2_malloc_type  (in libsystem_malloc.dylib) + 472  [0x1844f3e68]
+        + ! : | + ! : | + ! : 9 nanov2_allocate_outlined  (in libsystem_malloc.dylib) + 376  [0x1844f56e0]
+        + ! : | + ! : | + ! : 2 nanov2_allocate_outlined  (in libsystem_malloc.dylib) + 256  [0x1844f5668]
+        + ! : | + ! : | + ! :   2 nanov2_find_block_and_allocate  (in libsystem_malloc.dylib) + 332,368  [0x1844d0f0c,0x1844d0f30]
+        + ! : | + ! : | + ! 4 nanov2_malloc_type  (in libsystem_malloc.dylib) + 420,36  [0x1844f3e34,0x1844f3cb4]
+        + ! : | + ! : | + 1 operator new(unsigned long)  (in libc++abi.dylib) + 36  [0x18468235c]
+        + ! : | + ! : | 1 std::__libcpp_operator_new[abi:ne190102]<unsigned long>(unsigned long)  (in main) + 0  [0x102c0450c]  new:295
+        + ! : | + ! : | 1 std::__libcpp_operator_new[abi:ne190102]<unsigned long>(unsigned long)  (in main) + 16  [0x102c0451c]  new:297
+        + ! : | + ! : 4 std::__libcpp_allocate[abi:ne190102](unsigned long, unsigned long)  (in main) + 4  [0x102c04484]  new:312
+        + ! : | + ! : 1 std::__libcpp_allocate[abi:ne190102](unsigned long, unsigned long)  (in main) + 28  [0x102c0449c]  new:314
+        + ! : | + ! : | 1 std::__is_overaligned_for_new[abi:ne190102](unsigned long)  (in main) + 8  [0x102c01d84]  new:288
+        + ! : | + ! : 1 std::__libcpp_allocate[abi:ne190102](unsigned long, unsigned long)  (in main) + 84  [0x102c044d4]  new:322
+        + ! : | + ! 4 std::allocator<std::basic_string<char>>::allocate[abi:ne190102](unsigned long)  (in main) + 36  [0x102c0559c]  allocator.h:113
+        + ! : | + ! : 3 std::allocator_traits<std::allocator<std::basic_string<char>>>::max_size[abi:ne190102]<std::allocator<std::basic_string<char>>, 0>(std::allocator<std::basic_string<char>> const&)  (in main) + 24  [0x102c052e8]  allocator_traits.h:345
+        + ! : | + ! : | 3 std::allocator<std::basic_string<char>>::max_size[abi:ne190102]() const  (in main) + 16  [0x102c0532c]  allocator.h:160
+        + ! : | + ! : 1 std::allocator_traits<std::allocator<std::basic_string<char>>>::max_size[abi:ne190102]<std::allocator<std::basic_string<char>>, 0>(std::allocator<std::basic_string<char>> const&)  (in main) + 4  [0x102c0647c]
+        + ! : | + ! 3 std::allocator<std::basic_string<char>>::allocate[abi:ne190102](unsigned long)  (in main) + 36,28  [0x102c0559c,0x102c05594]  allocator.h:113
+        + ! : | + 1 std::__allocate_at_least[abi:ne190102]<std::allocator<std::basic_string<char>>>(std::allocator<std::basic_string<char>>&, unsigned long)  (in main) + 52  [0x102c054b4]  allocate_at_least.h:41
+        + ! : | 3 std::__split_buffer<std::basic_string<char>>::__split_buffer(unsigned long, unsigned long)  (in main) + 64  [0x102c053ac]  __split_buffer:349
+        + ! : | + 2 std::__compressed_pair<std::basic_string<char>*>::__compressed_pair[abi:ne190102]<std::nullptr_t>(std::nullptr_t&&)  (in main) + 64  [0x102c05550]  compressed_pair.h:119
+        + ! : | + 1 std::__compressed_pair<std::basic_string<char>*>::__compressed_pair[abi:ne190102]<std::nullptr_t>(std::nullptr_t&&)  (in main) + 44  [0x102c05470]  compressed_pair.h:119
+        + ! : | +   1 std::__compressed_pair<std::basic_string<char>*>::__compressed_pair[abi:ne190102]<std::nullptr_t>(std::nullptr_t&&)  (in main) + 16  [0x102c05520]  compressed_pair.h:119
+        + ! : | 2 std::__split_buffer<std::basic_string<char>>::__split_buffer(unsigned long, unsigned long)  (in main) + 64  [0x102c053ac]  __split_buffer:350
+        + ! : | 2 std::__split_buffer<std::basic_string<char>>::__split_buffer(unsigned long, unsigned long)  (in main) + 96  [0x102c053cc]  __split_buffer:353
+        + ! : |   2 std::__split_buffer<std::basic_string<char>>::__alloc[abi:ne190102]()  (in main) + 16,28  [0x102c054d0,0x102c054dc]  __split_buffer:114
+        + ! : 1 std::__split_buffer<std::basic_string<char>>::__split_buffer(unsigned long, unsigned long)  (in main) + 56  [0x102c0517c]  __split_buffer:359
+        + ! : 1 std::__split_buffer<std::basic_string<char>>::__split_buffer(unsigned long, unsigned long)  (in main) + 212  [0x102c05440]  __split_buffer:359
+        + ! 21 std::vector<std::basic_string<char>>::reserve(unsigned long)  (in main) + 72  [0x102c032fc]  vector:1465
+        + ! : 7 std::vector<std::basic_string<char>>::max_size() const  (in main) + 64  [0x102c050e0]  vector:1107
+        + ! : | 6 std::min[abi:ne190102]<unsigned long>(unsigned long const&, unsigned long const&)  (in main) + 32  [0x102c03fc4]  min.h:36
+        + ! : | + 3 std::min[abi:ne190102]<unsigned long, std::__less<void, void>>(unsigned long const&, unsigned long const&, std::__less<void, void>)  (in main) + 36  [0x102c04054]  min.h:30
+        + ! : | + ! 2 std::__less<void, void>::operator()[abi:ne190102]<unsigned long, unsigned long>(unsigned long const&, unsigned long const&) const  (in main) + 0  [0x102c04084]  comp.h:39
+        + ! : | + ! 1 std::__less<void, void>::operator()[abi:ne190102]<unsigned long, unsigned long>(unsigned long const&, unsigned long const&) const  (in main) + 36  [0x102c040a8]  comp.h:40
+        + ! : | + 3 std::min[abi:ne190102]<unsigned long, std::__less<void, void>>(unsigned long const&, unsigned long const&, std::__less<void, void>)  (in main) + 72  [0x102c04078]  min.h:30
+        + ! : | 1 std::min[abi:ne190102]<unsigned long>(unsigned long const&, unsigned long const&)  (in main) + 24  [0x102c03fbc]  min.h:36
+        + ! : 6 std::vector<std::basic_string<char>>::max_size() const  (in main) + 24  [0x102c050b8]  vector:1107
+        + ! : | 5 std::vector<std::basic_string<char>>::__alloc[abi:ne190102]() const  (in main) + 28  [0x102c05310]  vector:969
+        + ! : | + 4 std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]() const  (in main) + 24  [0x102c0534c]  compressed_pair.h:142
+        + ! : | + ! 4 std::__compressed_pair_elem<std::allocator<std::basic_string<char>>, 1, true>::__get[abi:ne190102]() const  (in main) + 8,0  [0x102c05360,0x102c05358]  compressed_pair.h:92
+        + ! : | + 1 std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]() const  (in main) + 24  [0x102c0534c]  compressed_pair.h:142
+        + ! : | 1 std::vector<std::basic_string<char>>::__alloc[abi:ne190102]() const  (in main) + 28  [0x102c05310]  vector:969
+        + ! : 3 std::vector<std::basic_string<char>>::max_size() const  (in main) + 28  [0x102c050bc]  vector:1107
+        + ! : | 3 std::allocator_traits<std::allocator<std::basic_string<char>>>::max_size[abi:ne190102]<std::allocator<std::basic_string<char>>, 0>(std::allocator<std::basic_string<char>> const&)  (in main) + 4  [0x102c0647c]
+        + ! : 2 std::vector<std::basic_string<char>>::max_size() const  (in main) + 0,16  [0x102c050a0,0x102c050b0]  vector:1106
+        + ! : 2 std::vector<std::basic_string<char>>::max_size() const  (in main) + 44  [0x102c050cc]  vector:1107
+        + ! : | 2 std::numeric_limits<long>::max[abi:ne190102]()  (in main) + 12  [0x102c04028]  limits:469
+        + ! : |   2 std::__libcpp_numeric_limits<long, true>::max[abi:ne190102]()  (in main) + 0  [0x102c04104]  limits:202
+        + ! : 1 std::vector<std::basic_string<char>>::max_size() const  (in main) + 80  [0x102c050f0]  vector:1107
+        + ! 19 std::vector<std::basic_string<char>>::reserve(unsigned long)  (in main) + 164  [0x102c03358]  vector:1469
+        + ! : 4 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 184  [0x102c05240]  vector:1056
+        + ! : | 2 std::enable_if<is_move_constructible<std::basic_string<char>*>::value && is_move_assignable<std::basic_string<char>*>::value, void>::type std::swap[abi:ne190102]<std::basic_string<char>*>(std::basic_string<char>*&, std::basic_string<char>*&)  (in main) + 48  [0x102c056c4]  swap.h:45
+        + ! : | 1 std::enable_if<is_move_constructible<std::basic_string<char>*>::value && is_move_assignable<std::basic_string<char>*>::value, void>::type std::swap[abi:ne190102]<std::basic_string<char>*>(std::basic_string<char>*&, std::basic_string<char>*&)  (in main) + 4  [0x102c05698]  swap.h:42
+        + ! : | 1 std::enable_if<is_move_constructible<std::basic_string<char>*>::value && is_move_assignable<std::basic_string<char>*>::value, void>::type std::swap[abi:ne190102]<std::basic_string<char>*>(std::basic_string<char>*&, std::basic_string<char>*&)  (in main) + 56  [0x102c056cc]  swap.h:46
+        + ! : 3 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 236  [0x102c05274]  vector:1058
+        + ! : | 2 std::enable_if<is_move_constructible<std::basic_string<char>*>::value && is_move_assignable<std::basic_string<char>*>::value, void>::type std::swap[abi:ne190102]<std::basic_string<char>*>(std::basic_string<char>*&, std::basic_string<char>*&)  (in main) + 48  [0x102c056c4]  swap.h:45
+        + ! : | 1 std::enable_if<is_move_constructible<std::basic_string<char>*>::value && is_move_assignable<std::basic_string<char>*>::value, void>::type std::swap[abi:ne190102]<std::basic_string<char>*>(std::basic_string<char>*&, std::basic_string<char>*&)  (in main) + 24  [0x102c056ac]  swap.h:44
+        + ! : 2 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 32  [0x102c051a8]  vector:1050
+        + ! : | 2 std::vector<std::basic_string<char>>::__annotate_delete[abi:ne190102]() const  (in main) + 0,4  [0x102c01b3c,0x102c01b40]  vector:913
+        + ! : 2 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 148  [0x102c0521c]  vector:1052
+        + ! : | 1 std::__uninitialized_allocator_relocate[abi:ne190102]<std::allocator<std::basic_string<char>>, std::basic_string<char>>(std::allocator<std::basic_string<char>>&, std::basic_string<char>*, std::basic_string<char>*, std::basic_string<char>*)  (in main) + 64  [0x102c05688]  uninitialized_algorithms.h:648
+        + ! : | + 1 DYLD-STUB$$memcpy  (in main) + 8  [0x102c065e8]
+        + ! : | 1 std::__uninitialized_allocator_relocate[abi:ne190102]<std::allocator<std::basic_string<char>>, std::basic_string<char>>(std::allocator<std::basic_string<char>>&, std::basic_string<char>*, std::basic_string<char>*, std::basic_string<char>*)  (in main) + 40  [0x102c05670]  uninitialized_algorithms.h:648
+        + ! : 2 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 204  [0x102c05254]  vector:1057
+        + ! : | 2 std::enable_if<is_move_constructible<std::basic_string<char>*>::value && is_move_assignable<std::basic_string<char>*>::value, void>::type std::swap[abi:ne190102]<std::basic_string<char>*>(std::basic_string<char>*&, std::basic_string<char>*&)  (in main) + 48  [0x102c056c4]  swap.h:45
+        + ! : 1 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 12  [0x102c05194]  vector:1049
+        + ! : 1 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 84  [0x102c051dc]  vector:1053
+        + ! : | 1 std::vector<std::basic_string<char>>::__alloc[abi:ne190102]()  (in main) + 28  [0x102c01b9c]  vector:966
+        + ! : 1 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 212  [0x102c0525c]  vector:1058
+        + ! : | 1 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main) + 28  [0x102c056ec]  vector:972
+        + ! : |   1 std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]()  (in main) + 24  [0x102c05724]  compressed_pair.h:130
+        + ! : |     1 std::__compressed_pair_elem<std::basic_string<char>*, 0, false>::__get[abi:ne190102]()  (in main) + 8  [0x102c0563c]  compressed_pair.h:62
+        + ! : 1 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 224  [0x102c05268]  vector:1058
+        + ! : | 1 std::__split_buffer<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main) + 28  [0x102c05504]  __split_buffer:119
+        + ! : |   1 std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]()  (in main) + 24  [0x102c05628]  compressed_pair.h:130
+        + ! : |     1 std::__compressed_pair_elem<std::basic_string<char>*, 0, false>::__get[abi:ne190102]()  (in main) + 8  [0x102c0563c]  compressed_pair.h:62
+        + ! : 1 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 260  [0x102c0528c]  vector:1060
+        + ! : | 1 std::vector<std::basic_string<char>>::size[abi:ne190102]() const  (in main) + 16  [0x102c0512c]  vector:635
+        + ! : 1 std::vector<std::basic_string<char>>::__swap_out_circular_buffer(std::__split_buffer<std::basic_string<char>&>&)  (in main) + 272  [0x102c05298]  vector:1060
+        + ! :   1 std::vector<std::basic_string<char>>::__annotate_new[abi:ne190102](unsigned long) const  (in main) + 8  [0x102c05700]  vector:906
+        + ! 4 std::vector<std::basic_string<char>>::reserve(unsigned long)  (in main) + 176  [0x102c03364]  vector:1470
+        + ! : 4 std::__split_buffer<std::basic_string<char>>::~__split_buffer()  (in main) + 28  [0x102c052c0]  __split_buffer:362
+        + ! :   2 std::__split_buffer<std::basic_string<char>>::~__split_buffer()  (in main) + 36  [0x102c05754]  __split_buffer:363
+        + ! :   | 1 std::__split_buffer<std::basic_string<char>>::clear[abi:ne190102]()  (in main) + 28  [0x102c057d0]  __split_buffer:130
+        + ! :   | + 1 std::__split_buffer<std::basic_string<char>>::__destruct_at_end[abi:ne190102](std::basic_string<char>*)  (in main) + 32  [0x102c0583c]  __split_buffer:194
+        + ! :   | +   1 std::__split_buffer<std::basic_string<char>>::__destruct_at_end[abi:ne190102](std::basic_string<char>*, std::integral_constant<bool, false>)  (in main) + 12  [0x102c05854]  __split_buffer:335
+        + ! :   | 1 std::__split_buffer<std::basic_string<char>>::clear[abi:ne190102]()  (in main) + 28  [0x102c057d0]  __split_buffer:130
+        + ! :   1 std::__split_buffer<std::basic_string<char>>::~__split_buffer()  (in main) + 0  [0x102c05730]  __split_buffer:362
+        + ! :   1 std::__split_buffer<std::basic_string<char>>::~__split_buffer()  (in main) + 32  [0x102c05750]  __split_buffer:363
+        + ! 3 std::vector<std::basic_string<char>>::reserve(unsigned long)  (in main) + 40  [0x102c032dc]  vector:1464
+        + ! : 3 std::vector<std::basic_string<char>>::capacity[abi:ne190102]() const  (in main) + 28  [0x102c01bc4]  vector:638
+        + ! :   3 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]() const  (in main) + 28  [0x102c01e94]  vector:975
+        + ! :     2 std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]() const  (in main) + 24  [0x102c01eb8]  compressed_pair.h:134
+        + ! :     1 std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]() const  (in main) + 0  [0x102c01ea0]  compressed_pair.h:133
+        + ! 3 std::vector<std::basic_string<char>>::reserve(unsigned long)  (in main) + 104  [0x102c0331c]  vector:1467
+        + ! : 2 std::vector<std::basic_string<char>>::__alloc[abi:ne190102]()  (in main) + 28  [0x102c01b9c]  vector:966
+        + ! : | 2 std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]()  (in main) + 24  [0x102c01e58]  compressed_pair.h:138
+        + ! : |   2 std::__compressed_pair_elem<std::allocator<std::basic_string<char>>, 1, true>::__get[abi:ne190102]()  (in main) + 8  [0x102c01e6c]  compressed_pair.h:91
+        + ! : 1 std::vector<std::basic_string<char>>::__alloc[abi:ne190102]()  (in main) + 28  [0x102c01b9c]  vector:966
+        + ! 2 std::vector<std::basic_string<char>>::reserve(unsigned long)  (in main) + 128  [0x102c03334]  vector:1468
+        + ! : 2 std::vector<std::basic_string<char>>::size[abi:ne190102]() const  (in main) + 36  [0x102c05140]  vector:635
+        + ! 1 std::vector<std::basic_string<char>>::reserve(unsigned long)  (in main) + 32  [0x102c032d4]  vector:1464
+        + ! 1 std::vector<std::basic_string<char>>::reserve(unsigned long)  (in main) + 164  [0x102c03358]  vector:1469
+        + ! 1 std::vector<std::basic_string<char>>::reserve(unsigned long)  (in main) + 204  [0x102c03380]  vector:1471
+        + 80 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 592  [0x102c02d9c]  CsvReader.cpp:46
+        + ! 68 std::vector<std::basic_string<char>>::push_back[abi:ne190102](std::basic_string<char>&&)  (in main) + 80  [0x102c033e4]  vector:1523
+        + ! : 36 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 76  [0x102c05988]  vector:961
+        + ! : | 36 std::allocator_traits<std::allocator<std::basic_string<char>>>::construct[abi:ne190102]<std::basic_string<char>, std::basic_string<char>, 0>(std::allocator<std::basic_string<char>>&, std::basic_string<char>*, std::basic_string<char>&&)  (in main) + 40  [0x102c05b18]  allocator_traits.h:319
+        + ! : |   35 std::allocator<std::basic_string<char>>::construct[abi:ne190102]<std::basic_string<char>, std::basic_string<char>>(std::basic_string<char>*, std::basic_string<char>&&)  (in main) + 36  [0x102c05bc0]  allocator.h:165
+        + ! : |   + 32 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 36  [0x102c05bf0]  string:1033
+        + ! : |   + ! 13 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 148  [0x102c05c94]  string:1037
+        + ! : |   + ! : 7 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 28  [0x102c04b9c]  string:1285
+        + ! : |   + ! : | 5 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 24  [0x102c02674]  string:1881
+        + ! : |   + ! : | + 3 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 0,16  [0x102c026e0,0x102c026f0]  compressed_pair.h:133
+        + ! : |   + ! : | + 2 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : |   + ! : | +   2 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 8  [0x102c0270c]  compressed_pair.h:63
+        + ! : |   + ! : | 2 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 40  [0x102c02684]  string:1881
+        + ! : |   + ! : 5 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 60  [0x102c04bbc]  string:1285
+        + ! : |   + ! : | 4 std::basic_string<char>::__get_short_size[abi:ne190102]() const  (in main) + 24  [0x102c04e24]  string:1963
+        + ! : |   + ! : | + 2 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : |   + ! : | + ! 2 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 0  [0x102c02704]  compressed_pair.h:63
+        + ! : |   + ! : | + 1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 16  [0x102c026f0]  compressed_pair.h:133
+        + ! : |   + ! : | + 1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : |   + ! : | 1 std::basic_string<char>::__get_short_size[abi:ne190102]() const  (in main) + 0  [0x102c04e0c]  string:1961
+        + ! : |   + ! : 1 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 72  [0x102c04bc8]  string:1285
+        + ! : |   + ! 7 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 132  [0x102c05c84]  string:1036
+        + ! : |   + ! : 6 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 24  [0x102c02674]  string:1881
+        + ! : |   + ! : | 3 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : |   + ! : | 2 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : |   + ! : | + 2 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 0  [0x102c02704]  compressed_pair.h:63
+        + ! : |   + ! : | 1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 4  [0x102c026e4]  compressed_pair.h:133
+        + ! : |   + ! : 1 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 40  [0x102c02684]  string:1881
+        + ! : |   + ! 5 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 44  [0x102c05c2c]  string:1029
+        + ! : |   + ! : 4 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)::'lambda'(std::basic_string<char>&)::operator()(std::basic_string<char>&) const  (in main) + 28  [0x102c05cd4]  string:1030
+        + ! : |   + ! : | 3 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 24  [0x102c02674]  string:1881
+        + ! : |   + ! : | + 2 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : |   + ! : | + ! 2 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 8  [0x102c0270c]  compressed_pair.h:63
+        + ! : |   + ! : | + 1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : |   + ! : | 1 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 40  [0x102c02684]  string:1881
+        + ! : |   + ! : 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)::'lambda'(std::basic_string<char>&)::operator()(std::basic_string<char>&) const  (in main) + 44  [0x102c05ce4]  string:1031
+        + ! : |   + ! :   1 std::basic_string<char>::__annotate_delete[abi:ne190102]() const  (in main) + 4  [0x102c05cfc]  string:2035
+        + ! : |   + ! 2 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 0,32  [0x102c05c00,0x102c05c20]  string:1033
+        + ! : |   + ! 2 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 124  [0x102c05c7c]  string:1035
+        + ! : |   + ! : 2 std::basic_string<char>::__annotate_new[abi:ne190102](unsigned long) const  (in main) + 8  [0x102c036d4]  string:2027
+        + ! : |   + ! 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 36  [0x102c05c24]  string:1029
+        + ! : |   + ! 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 96  [0x102c05c60]  string:1034
+        + ! : |   + ! : 1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]()  (in main) + 24  [0x102c02730]  compressed_pair.h:130
+        + ! : |   + ! :   1 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]()  (in main) + 0  [0x102c0273c]  compressed_pair.h:62
+        + ! : |   + ! 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 160  [0x102c05ca0]  string:1037
+        + ! : |   + !   1 std::basic_string<char>::__annotate_new[abi:ne190102](unsigned long) const  (in main) + 8  [0x102c036d4]  string:2027
+        + ! : |   + 2 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 40  [0x102c05bf4]  string:1038
+        + ! : |   + 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 4  [0x102c05bd0]  string:1033
+        + ! : |   1 std::allocator<std::basic_string<char>>::construct[abi:ne190102]<std::basic_string<char>, std::basic_string<char>>(std::basic_string<char>*, std::basic_string<char>&&)  (in main) + 4  [0x102c06530]
+        + ! : 10 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 40  [0x102c05964]  vector:960
+        + ! : | 9 std::vector<std::basic_string<char>>::_ConstructTransaction::_ConstructTransaction[abi:ne190102](std::vector<std::basic_string<char>>&, unsigned long)  (in main) + 44  [0x102c05ae0]  vector:935
+        + ! : | + 9 std::vector<std::basic_string<char>>::_ConstructTransaction::_ConstructTransaction[abi:ne190102](std::vector<std::basic_string<char>>&, unsigned long)  (in main) + 64,48,...  [0x102c05b90,0x102c05b80,...]  vector:935
+        + ! : | 1 std::vector<std::basic_string<char>>::_ConstructTransaction::_ConstructTransaction[abi:ne190102](std::vector<std::basic_string<char>>&, unsigned long)  (in main) + 48  [0x102c05ae4]  vector:939
+        + ! : 8 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 52  [0x102c05970]  vector:961
+        + ! : 3 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 48  [0x102c0596c]  vector:961
+        + ! : | 3 std::vector<std::basic_string<char>>::__alloc[abi:ne190102]()  (in main) + 28  [0x102c01b9c]  vector:966
+        + ! : |   1 std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]()  (in main) + 0  [0x102c01e40]  compressed_pair.h:137
+        + ! : |   1 std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]()  (in main) + 24  [0x102c01e58]  compressed_pair.h:138
+        + ! : |   + 1 std::__compressed_pair_elem<std::allocator<std::basic_string<char>>, 1, true>::__get[abi:ne190102]()  (in main) + 12  [0x102c01e70]  compressed_pair.h:91
+        + ! : |   1 std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]()  (in main) + 24  [0x102c01e58]  compressed_pair.h:138
+        + ! : 3 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 60  [0x102c05978]  vector:961
+        + ! : | 3 std::basic_string<char>* std::__to_address[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>*)  (in main) + 8  [0x102c01ca4]  pointer_traits.h:192
+        + ! : 3 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 100  [0x102c059a0]  vector:963
+        + ! : | 3 std::vector<std::basic_string<char>>::_ConstructTransaction::~_ConstructTransaction[abi:ne190102]()  (in main) + 28  [0x102c05b40]  vector:941
+        + ! : |   1 std::vector<std::basic_string<char>>::_ConstructTransaction::~_ConstructTransaction[abi:ne190102]()  (in main) + 0  [0x102c05d08]  vector:941
+        + ! : |   1 std::vector<std::basic_string<char>>::_ConstructTransaction::~_ConstructTransaction[abi:ne190102]()  (in main) + 20  [0x102c05d1c]  vector:942
+        + ! : |   1 std::vector<std::basic_string<char>>::_ConstructTransaction::~_ConstructTransaction[abi:ne190102]()  (in main) + 24  [0x102c05d20]  vector:948
+        + ! : 3 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 100  [0x102c059a0]  vector:963
+        + ! : 2 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 4  [0x102c06500]
+        + ! 7 std::vector<std::basic_string<char>>::push_back[abi:ne190102](std::basic_string<char>&&)  (in main) + 48  [0x102c033c4]  vector:1522
+        + ! : 3 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main) + 28,24  [0x102c056ec,0x102c056e8]  vector:972
+        + ! : 2 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main) + 8,16  [0x102c056d8,0x102c056e0]  vector:971
+        + ! : 2 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main) + 28  [0x102c056ec]  vector:972
+        + ! :   1 std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]()  (in main) + 0  [0x102c0570c]  compressed_pair.h:129
+        + ! :   1 std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]()  (in main) + 24  [0x102c05724]  compressed_pair.h:130
+        + ! :     1 std::__compressed_pair_elem<std::basic_string<char>*, 0, false>::__get[abi:ne190102]()  (in main) + 8  [0x102c0563c]  compressed_pair.h:62
+        + ! 3 std::vector<std::basic_string<char>>::push_back[abi:ne190102](std::basic_string<char>&&)  (in main) + 28  [0x102c033b0]  vector:1521
+        + ! 2 std::vector<std::basic_string<char>>::push_back[abi:ne190102](std::basic_string<char>&&)  (in main) + 128  [0x102c03414]  vector:1529
+        + 44 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 740  [0x102c02e30]  CsvReader.cpp:54
+        + ! 35 std::vector<std::vector<std::basic_string<char>>>::push_back[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 80  [0x102c034d8]  vector:1523
+        + ! : 24 std::vector<std::vector<std::basic_string<char>>>::__construct_one_at_end[abi:ne190102]<std::vector<std::basic_string<char>>>(std::vector<std::basic_string<char>>&&)  (in main) + 76  [0x102c05ea0]  vector:961
+        + ! : | 22 std::allocator_traits<std::allocator<std::vector<std::basic_string<char>>>>::construct[abi:ne190102]<std::vector<std::basic_string<char>>, std::vector<std::basic_string<char>>, 0>(std::allocator<std::vector<std::basic_string<char>>>&, std::vector<std::basic_string<char>>*, std::vector<std::basic_string<char>>&&)  (in main) + 40  [0x102c06030]  allocator_traits.h:319
+        + ! : | + 20 std::allocator<std::vector<std::basic_string<char>>>::construct[abi:ne190102]<std::vector<std::basic_string<char>>, std::vector<std::basic_string<char>>>(std::vector<std::basic_string<char>>*, std::vector<std::basic_string<char>>&&)  (in main) + 36  [0x102c060d8]  allocator.h:165
+        + ! : | + ! 16 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 36  [0x102c06108]  vector:1255
+        + ! : | + ! : 2 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main) + 32,36  [0x102c056f0,0x102c056f4]  vector:972
+        + ! : | + ! : 2 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 76  [0x102c06164]  vector:1255
+        + ! : | + ! : | 1 std::__compressed_pair<std::basic_string<char>*>::__compressed_pair[abi:ne190102]<std::nullptr_t>(std::nullptr_t&&&&)  (in main) + 44  [0x102c06208]  compressed_pair.h:119
+        + ! : | + ! : | + 1 std::__compressed_pair<std::basic_string<char>*>::__compressed_pair[abi:ne190102]<std::nullptr_t>(std::nullptr_t&&&&)  (in main) + 40  [0x102c06240]  compressed_pair.h:119
+        + ! : | + ! : | +   1 std::__compressed_pair_elem<std::basic_string<char>*, 0, false>::__compressed_pair_elem[abi:ne190102]<std::nullptr_t, 0>(std::nullptr_t&&)  (in main) + 16  [0x102c05028]  compressed_pair.h:53
+        + ! : | + ! : | 1 std::__compressed_pair<std::basic_string<char>*>::__compressed_pair[abi:ne190102]<std::nullptr_t>(std::nullptr_t&&&&)  (in main) + 24  [0x102c061f4]  compressed_pair.h:119
+        + ! : | + ! : 2 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 116  [0x102c0618c]  vector:1258
+        + ! : | + ! : | 2 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main) + 28  [0x102c056ec]  vector:972
+        + ! : | + ! : 2 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 136  [0x102c061a0]  vector:1258
+        + ! : | + ! : | 1 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main) + 16  [0x102c056e0]  vector:971
+        + ! : | + ! : | 1 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main) + 28  [0x102c056ec]  vector:972
+        + ! : | + ! : |   1 std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]()  (in main) + 24  [0x102c05724]  compressed_pair.h:130
+        + ! : | + ! : |     1 std::__compressed_pair_elem<std::basic_string<char>*, 0, false>::__get[abi:ne190102]()  (in main) + 8  [0x102c0563c]  compressed_pair.h:62
+        + ! : | + ! : 2 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 128,136  [0x102c06198,0x102c061a0]  vector:1258
+        + ! : | + ! : 2 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 152  [0x102c061b0]  vector:1259
+        + ! : | + ! : 1 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 56  [0x102c06150]  vector:1255
+        + ! : | + ! : | 1 std::vector<std::basic_string<char>>::__alloc[abi:ne190102]()  (in main) + 28  [0x102c01b9c]  vector:966
+        + ! : | + ! : |   1 std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]()  (in main) + 16  [0x102c01e50]  compressed_pair.h:137
+        + ! : | + ! : 1 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 152  [0x102c061b0]  vector:1259
+        + ! : | + ! : | 1 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main) + 28  [0x102c056ec]  vector:972
+        + ! : | + ! : 1 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 180  [0x102c061cc]  vector:1260
+        + ! : | + ! : 1 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 28  [0x102c06134]  vector:766
+        + ! : | + ! 3 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 4,0  [0x102c060e8,0x102c060e4]  vector:1255
+        + ! : | + ! 1 std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 40  [0x102c0610c]  vector:1260
+        + ! : | + 2 std::allocator<std::vector<std::basic_string<char>>>::construct[abi:ne190102]<std::vector<std::basic_string<char>>, std::vector<std::basic_string<char>>>(std::vector<std::basic_string<char>>*, std::vector<std::basic_string<char>>&&)  (in main) + 36  [0x102c060d8]  allocator.h:166
+        + ! : | 1 std::allocator_traits<std::allocator<std::vector<std::basic_string<char>>>>::construct[abi:ne190102]<std::vector<std::basic_string<char>>, std::vector<std::basic_string<char>>, 0>(std::allocator<std::vector<std::basic_string<char>>>&, std::vector<std::basic_string<char>>*, std::vector<std::basic_string<char>>&&)  (in main) + 36  [0x102c0602c]  allocator_traits.h:319
+        + ! : | 1 std::allocator_traits<std::allocator<std::vector<std::basic_string<char>>>>::construct[abi:ne190102]<std::vector<std::basic_string<char>>, std::vector<std::basic_string<char>>, 0>(std::allocator<std::vector<std::basic_string<char>>>&, std::vector<std::basic_string<char>>*, std::vector<std::basic_string<char>>&&)  (in main) + 40  [0x102c06030]  allocator_traits.h:321
+        + ! : 7 std::vector<std::vector<std::basic_string<char>>>::__construct_one_at_end[abi:ne190102]<std::vector<std::basic_string<char>>>(std::vector<std::basic_string<char>>&&)  (in main) + 52,48  [0x102c05e88,0x102c05e84]  vector:961
+        + ! : 2 std::vector<std::vector<std::basic_string<char>>>::__construct_one_at_end[abi:ne190102]<std::vector<std::basic_string<char>>>(std::vector<std::basic_string<char>>&&)  (in main) + 40  [0x102c05e7c]  vector:960
+        + ! : | 2 std::vector<std::vector<std::basic_string<char>>>::_ConstructTransaction::_ConstructTransaction[abi:ne190102](std::vector<std::vector<std::basic_string<char>>>&, unsigned long)  (in main) + 44  [0x102c05ff8]  vector:935
+        + ! : |   2 std::vector<std::vector<std::basic_string<char>>>::_ConstructTransaction::_ConstructTransaction[abi:ne190102](std::vector<std::vector<std::basic_string<char>>>&, unsigned long)  (in main) + 64  [0x102c060a8]  vector:935
+        + ! : 1 std::vector<std::vector<std::basic_string<char>>>::__construct_one_at_end[abi:ne190102]<std::vector<std::basic_string<char>>>(std::vector<std::basic_string<char>>&&)  (in main) + 60  [0x102c05e90]  vector:961
+        + ! : | 1 std::vector<std::basic_string<char>>* std::__to_address[abi:ne190102]<std::vector<std::basic_string<char>>>(std::vector<std::basic_string<char>>*)  (in main) + 8  [0x102c01994]  pointer_traits.h:192
+        + ! : 1 std::vector<std::vector<std::basic_string<char>>>::__construct_one_at_end[abi:ne190102]<std::vector<std::basic_string<char>>>(std::vector<std::basic_string<char>>&&)  (in main) + 100  [0x102c05eb8]  vector:963
+        + ! 7 std::vector<std::vector<std::basic_string<char>>>::push_back[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 48  [0x102c034b8]  vector:1522
+        + ! : 7 std::vector<std::vector<std::basic_string<char>>>::__end_cap[abi:ne190102]()  (in main) + 28  [0x102c0464c]  vector:972
+        + ! :   5 std::__compressed_pair<std::vector<std::basic_string<char>>*>::first[abi:ne190102]()  (in main) + 24  [0x102c04684]  compressed_pair.h:130
+        + ! :   | 5 std::__compressed_pair_elem<std::vector<std::basic_string<char>>*, 0, false>::__get[abi:ne190102]()  (in main) + 8,0  [0x102c0459c,0x102c04594]  compressed_pair.h:62
+        + ! :   1 std::__compressed_pair<std::vector<std::basic_string<char>>*>::first[abi:ne190102]()  (in main) + 12  [0x102c04678]  compressed_pair.h:129
+        + ! :   1 std::__compressed_pair<std::vector<std::basic_string<char>>*>::first[abi:ne190102]()  (in main) + 24  [0x102c04684]  compressed_pair.h:130
+        + ! 1 std::vector<std::vector<std::basic_string<char>>>::push_back[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 116  [0x102c034fc]  vector:0
+        + ! 1 std::vector<std::vector<std::basic_string<char>>>::push_back[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main) + 80  [0x102c034d8]  vector:1524
+        + 37 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 576  [0x102c02d8c]  CsvReader.cpp:46
+        + ! 25 std::basic_string<char>::substr[abi:ne190102](unsigned long, unsigned long) const  (in main) + 92  [0x102c0347c]  string:1684
+        + ! : 13 std::basic_string<char>::basic_string(std::basic_string<char> const&, unsigned long, unsigned long const&)  (in libc++.1.dylib) + 156  [0x1845f6b68]
+        + ! : | 12 operator new(unsigned long)  (in libc++abi.dylib) + 52  [0x18468236c]
+        + ! : | + 8 nanov2_malloc_type  (in libsystem_malloc.dylib) + 472  [0x1844f3e68]
+        + ! : | + ! 5 nanov2_allocate_outlined  (in libsystem_malloc.dylib) + 256  [0x1844f5668]
+        + ! : | + ! : 5 nanov2_find_block_and_allocate  (in libsystem_malloc.dylib) + 332,408,...  [0x1844d0f0c,0x1844d0f58,...]
+        + ! : | + ! 3 nanov2_allocate_outlined  (in libsystem_malloc.dylib) + 376  [0x1844f56e0]
+        + ! : | + 3 nanov2_malloc_type  (in libsystem_malloc.dylib) + 224,420,...  [0x1844f3d70,0x1844f3e34,...]
+        + ! : | + 1 malloc_type_malloc  (in libsystem_malloc.dylib) + 36  [0x1844ebc38]
+        + ! : | 1 DYLD-STUB$$operator new(unsigned long)  (in libc++.1.dylib) + 0  [0x184643210]
+        + ! : 7 std::basic_string<char>::basic_string(std::basic_string<char> const&, unsigned long, unsigned long const&)  (in libc++.1.dylib) + 188  [0x1845f6b88]
+        + ! : | 7 _platform_memmove  (in libsystem_platform.dylib) + 452,428,...  [0x1846febd4,0x1846febbc,...]
+        + ! : 4 std::basic_string<char>::basic_string(std::basic_string<char> const&, unsigned long, unsigned long const&)  (in libc++.1.dylib) + 36,16,...  [0x1845f6af0,0x1845f6adc,...]
+        + ! : 1 DYLD-STUB$$std::basic_string<char>::basic_string(std::basic_string<char> const&, unsigned long, unsigned long const&)  (in main) + 4  [0x102c063bc]
+        + ! 6 std::basic_string<char>::substr[abi:ne190102](unsigned long, unsigned long) const  (in main) + 68  [0x102c03464]  string:1684
+        + ! : 4 std::allocator<char>::allocator[abi:ne190102]()  (in main) + 28  [0x102c0592c]  allocator.h:107
+        + ! : | 2 std::allocator<char>::allocator[abi:ne190102]()  (in main) + 28  [0x102c0153c]  allocator.h:107
+        + ! : | + 2 std::__non_trivial_if<true>::__non_trivial_if[abi:ne190102]()  (in main) + 0,8  [0x102c0154c,0x102c01554]  allocator.h:85
+        + ! : | 2 std::allocator<char>::allocator[abi:ne190102]()  (in main) + 8,20  [0x102c01528,0x102c01534]  allocator.h:107
+        + ! : 2 std::allocator<char>::allocator[abi:ne190102]()  (in main) + 32  [0x102c05930]  allocator.h:107
+        + ! 3 std::basic_string<char>::substr[abi:ne190102](unsigned long, unsigned long) const  (in main) + 60,92  [0x102c0345c,0x102c0347c]  string:1684
+        + ! 2 std::basic_string<char>::basic_string(std::basic_string<char> const&, unsigned long, unsigned long const&)  (in libc++.1.dylib) + 208  [0x1845f6b9c]
+        + ! 1 std::basic_string<char>::substr[abi:ne190102](unsigned long, unsigned long) const  (in main) + 20  [0x102c03434]  string:1683
+        + 29 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 716  [0x102c02e18]  CsvReader.cpp:52
+        + ! 28 std::vector<std::basic_string<char>>::push_back[abi:ne190102](std::basic_string<char>&&)  (in main) + 80  [0x102c033e4]  vector:1523
+        + ! : 19 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 76  [0x102c05988]  vector:961
+        + ! : | 17 std::allocator_traits<std::allocator<std::basic_string<char>>>::construct[abi:ne190102]<std::basic_string<char>, std::basic_string<char>, 0>(std::allocator<std::basic_string<char>>&, std::basic_string<char>*, std::basic_string<char>&&)  (in main) + 40  [0x102c05b18]  allocator_traits.h:319
+        + ! : | + 17 std::allocator<std::basic_string<char>>::construct[abi:ne190102]<std::basic_string<char>, std::basic_string<char>>(std::basic_string<char>*, std::basic_string<char>&&)  (in main) + 36  [0x102c05bc0]  allocator.h:165
+        + ! : | +   15 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 36  [0x102c05bf0]  string:1033
+        + ! : | +   ! 4 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 44  [0x102c05c2c]  string:1029
+        + ! : | +   ! : 2 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)::'lambda'(std::basic_string<char>&)::operator()(std::basic_string<char>&) const  (in main) + 52  [0x102c05cec]  string:1032
+        + ! : | +   ! : 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)::'lambda'(std::basic_string<char>&)::operator()(std::basic_string<char>&) const  (in main) + 28  [0x102c05cd4]  string:1030
+        + ! : | +   ! : | 1 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 40  [0x102c02684]  string:1881
+        + ! : | +   ! : 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)::'lambda'(std::basic_string<char>&)::operator()(std::basic_string<char>&) const  (in main) + 44  [0x102c05ce4]  string:1031
+        + ! : | +   ! :   1 std::basic_string<char>::__annotate_delete[abi:ne190102]() const  (in main) + 4  [0x102c05cfc]  string:2035
+        + ! : | +   ! 3 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 148  [0x102c05c94]  string:1037
+        + ! : | +   ! : 1 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 0  [0x102c04b80]  string:1284
+        + ! : | +   ! : 1 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 28  [0x102c04b9c]  string:1285
+        + ! : | +   ! : | 1 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 0  [0x102c0265c]  string:1877
+        + ! : | +   ! : 1 std::basic_string<char>::size[abi:ne190102]() const  (in main) + 60  [0x102c04bbc]  string:1285
+        + ! : | +   ! :   1 std::basic_string<char>::__get_short_size[abi:ne190102]() const  (in main) + 24  [0x102c04e24]  string:1963
+        + ! : | +   ! :     1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : | +   ! :       1 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 8  [0x102c0270c]  compressed_pair.h:63
+        + ! : | +   ! 2 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 132  [0x102c05c84]  string:1036
+        + ! : | +   ! : 2 std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 24  [0x102c02674]  string:1881
+        + ! : | +   ! :   1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : | +   ! :   | 1 std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 8  [0x102c0270c]  compressed_pair.h:63
+        + ! : | +   ! :   1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        + ! : | +   ! 2 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 160  [0x102c05ca0]  string:1037
+        + ! : | +   ! : 2 std::basic_string<char>::__annotate_new[abi:ne190102](unsigned long) const  (in main) + 8  [0x102c036d4]  string:2027
+        + ! : | +   ! 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 140  [0x102c05c8c]  string:0
+        + ! : | +   ! 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 96  [0x102c05c60]  string:1034
+        + ! : | +   ! : 1 std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]()  (in main) + 24  [0x102c02730]  compressed_pair.h:130
+        + ! : | +   ! 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 132  [0x102c05c84]  string:1036
+        + ! : | +   ! 1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 168  [0x102c05ca8]  string:1038
+        + ! : | +   1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 4  [0x102c05bd0]  string:1033
+        + ! : | +   1 std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main) + 40  [0x102c05bf4]  string:1038
+        + ! : | 2 std::allocator_traits<std::allocator<std::basic_string<char>>>::construct[abi:ne190102]<std::basic_string<char>, std::basic_string<char>, 0>(std::allocator<std::basic_string<char>>&, std::basic_string<char>*, std::basic_string<char>&&)  (in main) + 4  [0x102c06488]
+        + ! : 3 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 40  [0x102c05964]  vector:960
+        + ! : | 3 std::vector<std::basic_string<char>>::_ConstructTransaction::_ConstructTransaction[abi:ne190102](std::vector<std::basic_string<char>>&, unsigned long)  (in main) + 44  [0x102c05ae0]  vector:935
+        + ! : |   3 std::vector<std::basic_string<char>>::_ConstructTransaction::_ConstructTransaction[abi:ne190102](std::vector<std::basic_string<char>>&, unsigned long)  (in main) + 44,48  [0x102c05b7c,0x102c05b80]  vector:935
+        + ! : 3 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 100  [0x102c059a0]  vector:963
+        + ! : | 2 std::vector<std::basic_string<char>>::_ConstructTransaction::~_ConstructTransaction[abi:ne190102]()  (in main) + 28  [0x102c05b40]  vector:941
+        + ! : | + 1 std::vector<std::basic_string<char>>::_ConstructTransaction::~_ConstructTransaction[abi:ne190102]()  (in main) + 0  [0x102c05d08]  vector:941
+        + ! : | + 1 std::vector<std::basic_string<char>>::_ConstructTransaction::~_ConstructTransaction[abi:ne190102]()  (in main) + 20  [0x102c05d1c]  vector:942
+        + ! : | 1 std::vector<std::basic_string<char>>::_ConstructTransaction::~_ConstructTransaction[abi:ne190102]()  (in main) + 32  [0x102c05b44]  vector:948
+        + ! : 2 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 60  [0x102c05978]  vector:961
+        + ! : | 2 std::basic_string<char>* std::__to_address[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>*)  (in main) + 8  [0x102c01ca4]  pointer_traits.h:192
+        + ! : 1 std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main) + 4  [0x102c06500]
+        + ! 1 std::vector<std::basic_string<char>>::push_back[abi:ne190102](std::basic_string<char>&&)  (in main) + 128  [0x102c03414]  vector:1529
+        + 12 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 632  [0x102c02dc4]  CsvReader.cpp:49
+        + ! 10 std::basic_string<char>::find(char, unsigned long) const  (in libc++.1.dylib) + 60  [0x1845f6bf4]
+        + ! : 6 _platform_memchr  (in libsystem_platform.dylib) + 80,120,...  [0x1846fc4f0,0x1846fc518,...]
+        + ! : 4 DYLD-STUB$$memchr  (in libc++.1.dylib) + 8  [0x184643718]
+        + ! 1 DYLD-STUB$$std::basic_string<char>::find(char, unsigned long) const  (in main) + 4  [0x102c06350]
+        + ! 1 std::basic_string<char>::find(char, unsigned long) const  (in libc++.1.dylib) + 20  [0x1845f6bcc]
+        + 12 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 700  [0x102c02e08]  CsvReader.cpp:52
+        + ! 8 std::basic_string<char>::substr[abi:ne190102](unsigned long, unsigned long) const  (in main) + 92  [0x102c0347c]  string:1684
+        + ! : 6 std::basic_string<char>::basic_string(std::basic_string<char> const&, unsigned long, unsigned long const&)  (in libc++.1.dylib) + 188  [0x1845f6b88]
+        + ! : | 6 _platform_memmove  (in libsystem_platform.dylib) + 444,452,...  [0x1846febcc,0x1846febd4,...]
+        + ! : 1 DYLD-STUB$$std::basic_string<char>::basic_string(std::basic_string<char> const&, unsigned long, unsigned long const&)  (in main) + 4  [0x102c063bc]
+        + ! : 1 std::basic_string<char>::basic_string(std::basic_string<char> const&, unsigned long, unsigned long const&)  (in libc++.1.dylib) + 100  [0x1845f6b30]
+        + ! 2 std::basic_string<char>::substr[abi:ne190102](unsigned long, unsigned long) const  (in main) + 68  [0x102c03464]  string:1684
+        + ! : 2 std::allocator<char>::allocator[abi:ne190102]()  (in main) + 28  [0x102c0592c]  allocator.h:107
+        + ! :   1 std::allocator<char>::allocator[abi:ne190102]()  (in main) + 28  [0x102c0153c]  allocator.h:107
+        + ! :   | 1 std::__non_trivial_if<true>::__non_trivial_if[abi:ne190102]()  (in main) + 8  [0x102c01554]  allocator.h:85
+        + ! :   1 std::allocator<char>::allocator[abi:ne190102]()  (in main) + 20  [0x102c01534]  allocator.h:107
+        + ! 1 std::basic_string<char>::basic_string(std::basic_string<char> const&, unsigned long, unsigned long const&)  (in libc++.1.dylib) + 208  [0x1845f6b9c]
+        + ! 1 std::basic_string<char>::substr[abi:ne190102](unsigned long, unsigned long) const  (in main) + 32  [0x102c03440]  string:1683
+        + 9 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 752  [0x102c02e3c]  CsvReader.cpp:59
+        + ! 7 std::vector<std::basic_string<char>>::~vector[abi:ne190102]()  (in main) + 28  [0x102c019e4]  vector:541
+        + ! : 4 std::vector<std::basic_string<char>>::~vector[abi:ne190102]()  (in main) + 44  [0x102c01a20]  vector:541
+        + ! : | 4 std::vector<std::basic_string<char>>::__destroy_vector::operator()[abi:ne190102]()  (in main) + 24,28  [0x102c01a84,0x102c01a88]  vector:529
+        + ! : 2 std::vector<std::basic_string<char>>::~vector[abi:ne190102]()  (in main) + 32  [0x102c01a14]  vector:541
+        + ! : | 1 std::vector<std::basic_string<char>>::__destroy_vector::__destroy_vector[abi:ne190102](std::vector<std::basic_string<char>>&)  (in main) + 36  [0x102c01a5c]  vector:526
+        + ! : | + 1 std::vector<std::basic_string<char>>::__destroy_vector::__destroy_vector[abi:ne190102](std::vector<std::basic_string<char>>&)  (in main) + 0  [0x102c01af4]  vector:526
+        + ! : | 1 std::vector<std::basic_string<char>>::__destroy_vector::__destroy_vector[abi:ne190102](std::vector<std::basic_string<char>>&)  (in main) + 28  [0x102c01a54]  vector:526
+        + ! : 1 std::vector<std::basic_string<char>>::~vector[abi:ne190102]()  (in main) + 20  [0x102c01a08]  vector:541
+        + ! 2 std::vector<std::basic_string<char>>::~vector[abi:ne190102]()  (in main) + 0  [0x102c019c8]  vector:541
+        + 8 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 604  [0x102c02da8]  CsvReader.cpp:46
+        + ! 4 DYLD-STUB$$std::basic_string<char>::~basic_string()  (in main) + 4,0  [0x102c063c8,0x102c063c4]
+        + ! 4 std::basic_string<char>::~basic_string()  (in libc++.1.dylib) + 20  [0x1845f619c]
+        + 6 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 488  [0x102c02d34]  CsvReader.cpp:38
+        + ! 6 std::vector<std::basic_string<char>>::vector[abi:ne190102]()  (in main) + 28  [0x102c032a4]  vector:431
+        + !   4 std::vector<std::basic_string<char>>::vector[abi:ne190102]()  (in main) + 52  [0x102c04f84]  vector:769
+        + !   : 4 std::__compressed_pair<std::basic_string<char>*>::__compressed_pair[abi:ne190102]<std::nullptr_t, std::__default_init_tag>(std::nullptr_t&&, std::__default_init_tag&&)  (in main) + 44  [0x102c04fc8]  compressed_pair.h:119
+        + !   :   3 std::__compressed_pair<std::basic_string<char>*>::__compressed_pair[abi:ne190102]<std::nullptr_t, std::__default_init_tag>(std::nullptr_t&&, std::__default_init_tag&&)  (in main) + 48  [0x102c05008]  compressed_pair.h:119
+        + !   :   | 2 std::__compressed_pair_elem<std::allocator<std::basic_string<char>>, 1, true>::__compressed_pair_elem[abi:ne190102](std::__default_init_tag)  (in main) + 28  [0x102c05050]  compressed_pair.h:77
+        + !   :   | + 1 std::allocator<std::basic_string<char>>::allocator[abi:ne190102]()  (in main) + 28  [0x102c0507c]  allocator.h:107
+        + !   :   | + ! 1 std::__non_trivial_if<true>::__non_trivial_if[abi:ne190102]()  (in main) + 8  [0x102c05094]  allocator.h:85
+        + !   :   | + 1 std::allocator<std::basic_string<char>>::allocator[abi:ne190102]()  (in main) + 28  [0x102c0507c]  allocator.h:107
+        + !   :   | 1 std::__compressed_pair_elem<std::allocator<std::basic_string<char>>, 1, true>::__compressed_pair_elem[abi:ne190102](std::__default_init_tag)  (in main) + 32  [0x102c05054]  compressed_pair.h:77
+        + !   :   1 std::__compressed_pair<std::basic_string<char>*>::__compressed_pair[abi:ne190102]<std::nullptr_t, std::__default_init_tag>(std::nullptr_t&&, std::__default_init_tag&&)  (in main) + 40  [0x102c05000]  compressed_pair.h:119
+        + !   :     1 std::__compressed_pair_elem<std::basic_string<char>*, 0, false>::__compressed_pair_elem[abi:ne190102]<std::nullptr_t, 0>(std::nullptr_t&&)  (in main) + 4  [0x102c0501c]  compressed_pair.h:53
+        + !   2 std::vector<std::basic_string<char>>::vector[abi:ne190102]()  (in main) + 0,60  [0x102c04f50,0x102c04f8c]  vector:431
+        + 3 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 524  [0x102c02d58]  CsvReader.cpp:42
+        + ! 1 DYLD-STUB$$std::basic_string<char>::find(char, unsigned long) const  (in main) + 4  [0x102c06350]
+        + ! 1 std::basic_string<char>::find(char, unsigned long) const  (in libc++.1.dylib) + 60  [0x1845f6bf4]
+        + ! : 1 _platform_memchr  (in libsystem_platform.dylib) + 0  [0x1846fc4a0]
+        + ! 1 std::basic_string<char>::find(char, unsigned long) const  (in libc++.1.dylib) + 36  [0x1845f6bdc]
+        + 2 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 464  [0x102c02d1c]  CsvReader.cpp:0
+        + 2 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 456  [0x102c02d14]  CsvReader.cpp:37
+        + ! 1 std::basic_ios<char>::operator bool[abi:ne190102]() const  (in main) + 24  [0x102c03278]  ios:573
+        + ! : 1 std::basic_ios<char>::fail[abi:ne190102]() const  (in main) + 24  [0x102c04f20]  ios:582
+        + ! :   1 std::ios_base::fail[abi:ne190102]() const  (in main) + 0  [0x102c04f2c]  ios:511
+        + ! 1 std::basic_ios<char>::operator bool[abi:ne190102]() const  (in main) + 0  [0x102c03260]  ios:573
+        + 2 std::basic_string<char>::~basic_string()  (in libc++.1.dylib) + 44  [0x1845f61b4]
+        + 1 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 508  [0x102c02d48]  CsvReader.cpp:40
+        + 1 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 728  [0x102c02e24]  CsvReader.cpp:52
+        + ! 1 DYLD-STUB$$std::basic_string<char>::~basic_string()  (in main) + 4  [0x102c063c8]
+        + 1 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 716  [0x102c02e18]  CsvReader.cpp:52
+        + 1 CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main) + 744  [0x102c02e34]  CsvReader.cpp:59
+        + 1 std::basic_string<char>::find(char, unsigned long) const  (in libc++.1.dylib) + 84  [0x1845f6c0c]
+        73 main  (in main) + 624  [0x102c00f38]  main.cpp:31
+          73 std::vector<std::vector<std::basic_string<char>>>::~vector[abi:ne190102]()  (in main) + 28  [0x102c0116c]  vector:541
+            73 std::vector<std::vector<std::basic_string<char>>>::~vector[abi:ne190102]()  (in main) + 44  [0x102c01710]  vector:541
+              73 std::vector<std::vector<std::basic_string<char>>>::__destroy_vector::operator()[abi:ne190102]()  (in main) + 52  [0x102c01790]  vector:530
+                73 std::vector<std::vector<std::basic_string<char>>>::__clear[abi:ne190102]()  (in main) + 28  [0x102c01820]  vector:979
+                  72 std::vector<std::vector<std::basic_string<char>>>::__base_destruct_at_end[abi:ne190102](std::vector<std::basic_string<char>>*)  (in main) + 100  [0x102c0193c]  vector:985
+                  ! 70 std::allocator_traits<std::allocator<std::vector<std::basic_string<char>>>>::destroy[abi:ne190102]<std::vector<std::basic_string<char>>, 0>(std::allocator<std::vector<std::basic_string<char>>>&, std::vector<std::basic_string<char>>*)  (in main) + 32  [0x102c01980]  allocator_traits.h:334
+                  ! : 69 std::allocator<std::vector<std::basic_string<char>>>::destroy[abi:ne190102](std::vector<std::basic_string<char>>*)  (in main) + 28  [0x102c019bc]  allocator.h:168
+                  ! : | 69 std::vector<std::basic_string<char>>::~vector[abi:ne190102]()  (in main) + 28  [0x102c019e4]  vector:541
+                  ! : |   68 std::vector<std::basic_string<char>>::~vector[abi:ne190102]()  (in main) + 44  [0x102c01a20]  vector:541
+                  ! : |   + 36 std::vector<std::basic_string<char>>::__destroy_vector::operator()[abi:ne190102]()  (in main) + 52  [0x102c01aa0]  vector:530
+                  ! : |   + ! 35 std::vector<std::basic_string<char>>::__clear[abi:ne190102]()  (in main) + 28  [0x102c01b30]  vector:979
+                  ! : |   + ! : 18 std::vector<std::basic_string<char>>::__base_destruct_at_end[abi:ne190102](std::basic_string<char>*)  (in main) + 100  [0x102c01c4c]  vector:985
+                  ! : |   + ! : | 14 std::allocator_traits<std::allocator<std::basic_string<char>>>::destroy[abi:ne190102]<std::basic_string<char>, 0>(std::allocator<std::basic_string<char>>&, std::basic_string<char>*)  (in main) + 32  [0x102c01c90]  allocator_traits.h:334
+                  ! : |   + ! : | + 12 std::allocator<std::basic_string<char>>::destroy[abi:ne190102](std::basic_string<char>*)  (in main) + 28  [0x102c01ccc]  allocator.h:168
+                  ! : |   + ! : | + ! 12 std::basic_string<char>::~basic_string()  (in libc++.1.dylib) + 36  [0x1845f61ac]
+                  ! : |   + ! : | + !   5 _nanov2_free  (in libsystem_malloc.dylib) + 56,252,...  [0x1844f3f0c,0x1844f3fd0,...]
+                  ! : |   + ! : | + !   4 _free  (in libsystem_malloc.dylib) + 80,0,...  [0x184500274,0x184500224,...]
+                  ! : |   + ! : | + !   3 _nanov2_free  (in libsystem_malloc.dylib) + 520  [0x1844f40dc]
+                  ! : |   + ! : | + !     3 _platform_memset  (in libsystem_platform.dylib) + 208  [0x1846fe810]
+                  ! : |   + ! : | + 1 std::allocator<std::basic_string<char>>::destroy[abi:ne190102](std::basic_string<char>*)  (in main) + 28  [0x102c01ccc]  allocator.h:168
+                  ! : |   + ! : | + 1 std::basic_string<char>::~basic_string()  (in libc++.1.dylib) + 44  [0x1845f61b4]
+                  ! : |   + ! : | 2 std::allocator_traits<std::allocator<std::basic_string<char>>>::destroy[abi:ne190102]<std::basic_string<char>, 0>(std::allocator<std::basic_string<char>>&, std::basic_string<char>*)  (in main) + 4  [0x102c06470]
+                  ! : |   + ! : | 2 std::allocator_traits<std::allocator<std::basic_string<char>>>::destroy[abi:ne190102]<std::basic_string<char>, 0>(std::allocator<std::basic_string<char>>&, std::basic_string<char>*)  (in main) + 32  [0x102c01c90]  allocator_traits.h:336
+                  ! : |   + ! : 7 std::vector<std::basic_string<char>>::__base_destruct_at_end[abi:ne190102](std::basic_string<char>*)  (in main) + 68  [0x102c01c2c]  vector:985
+                  ! : |   + ! : | 6 std::vector<std::basic_string<char>>::__alloc[abi:ne190102]()  (in main) + 28  [0x102c01b9c]  vector:966
+                  ! : |   + ! : | + 3 std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]()  (in main) + 24  [0x102c01e58]  compressed_pair.h:138
+                  ! : |   + ! : | + ! 3 std::__compressed_pair_elem<std::allocator<std::basic_string<char>>, 1, true>::__get[abi:ne190102]()  (in main) + 8  [0x102c01e6c]  compressed_pair.h:91
+                  ! : |   + ! : | + 2 std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]()  (in main) + 24  [0x102c01e58]  compressed_pair.h:138
+                  ! : |   + ! : | + 1 std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]()  (in main) + 0  [0x102c01e40]  compressed_pair.h:137
+                  ! : |   + ! : | 1 std::vector<std::basic_string<char>>::__alloc[abi:ne190102]()  (in main) + 28  [0x102c01b9c]  vector:966
+                  ! : |   + ! : 5 std::vector<std::basic_string<char>>::__base_destruct_at_end[abi:ne190102](std::basic_string<char>*)  (in main) + 44,40  [0x102c01c14,0x102c01c10]  vector:984
+                  ! : |   + ! : 3 std::vector<std::basic_string<char>>::__base_destruct_at_end[abi:ne190102](std::basic_string<char>*)  (in main) + 88  [0x102c01c40]  vector:985
+                  ! : |   + ! : | 3 std::basic_string<char>* std::__to_address[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>*)  (in main) + 8  [0x102c01ca4]  pointer_traits.h:192
+                  ! : |   + ! : 1 std::vector<std::basic_string<char>>::__base_destruct_at_end[abi:ne190102](std::basic_string<char>*)  (in main) + 32  [0x102c01c08]  vector:983
+                  ! : |   + ! : 1 std::vector<std::basic_string<char>>::__base_destruct_at_end[abi:ne190102](std::basic_string<char>*)  (in main) + 120  [0x102c01c60]  vector:987
+                  ! : |   + ! 1 std::vector<std::basic_string<char>>::__clear[abi:ne190102]()  (in main) + 20  [0x102c01b28]  vector:979
+                  ! : |   + 16 std::vector<std::basic_string<char>>::__destroy_vector::operator()[abi:ne190102]()  (in main) + 120  [0x102c01ae4]  vector:532
+                  ! : |   + ! 15 std::allocator_traits<std::allocator<std::basic_string<char>>>::deallocate[abi:ne190102](std::allocator<std::basic_string<char>>&, std::basic_string<char>*, unsigned long)  (in main) + 40  [0x102c01b74]  allocator_traits.h:312
+                  ! : |   + ! : 15 std::allocator<std::basic_string<char>>::deallocate[abi:ne190102](std::basic_string<char>*, unsigned long)  (in main) + 48  [0x102c01d08]  allocator.h:132
+                  ! : |   + ! :   14 std::__libcpp_deallocate[abi:ne190102](void*, unsigned long, unsigned long)  (in main) + 80  [0x102c01d6c]  new:343
+                  ! : |   + ! :   | 14 std::__do_deallocate_handle_size[abi:ne190102]<>(void*, unsigned long)  (in main) + 28  [0x102c01de4]  new:328
+                  ! : |   + ! :   |   13 std::__libcpp_operator_delete[abi:ne190102]<void*>(void*)  (in main) + 24  [0x102c01e34]  new:306
+                  ! : |   + ! :   |   + 4 _free  (in libsystem_malloc.dylib) + 0,48,...  [0x184500224,0x184500254,...]
+                  ! : |   + ! :   |   + 4 _nanov2_free  (in libsystem_malloc.dylib) + 492,16,...  [0x1844f40c0,0x1844f3ee4,...]
+                  ! : |   + ! :   |   + 4 nanov2_madvise_block  (in libsystem_malloc.dylib) + 132  [0x1844da4f4]
+                  ! : |   + ! :   |   + ! 4 nanov2_madvise_block_locked  (in libsystem_malloc.dylib) + 136  [0x1844f4f30]
+                  ! : |   + ! :   |   + !   4 mvm_madvise_free_plat  (in libsystem_malloc.dylib) + 108  [0x1844eb834]
+                  ! : |   + ! :   |   + !     4 madvise  (in libsystem_kernel.dylib) + 8  [0x184689b90]
+                  ! : |   + ! :   |   + 1 _nanov2_free  (in libsystem_malloc.dylib) + 520  [0x1844f40dc]
+                  ! : |   + ! :   |   +   1 DYLD-STUB$$_platform_bzero  (in libsystem_malloc.dylib) + 8  [0x184507528]
+                  ! : |   + ! :   |   1 _nanov2_free  (in libsystem_malloc.dylib) + 844  [0x1844f4220]
+                  ! : |   + ! :   1 std::__libcpp_deallocate[abi:ne190102](void*, unsigned long, unsigned long)  (in main) + 32  [0x102c01d3c]  new:339
+                  ! : |   + ! :     1 std::__is_overaligned_for_new[abi:ne190102](unsigned long)  (in main) + 8  [0x102c01d84]  new:288
+                  ! : |   + ! 1 std::allocator_traits<std::allocator<std::basic_string<char>>>::deallocate[abi:ne190102](std::allocator<std::basic_string<char>>&, std::basic_string<char>*, unsigned long)  (in main) + 40  [0x102c01b74]  allocator_traits.h:313
+                  ! : |   + 10 std::vector<std::basic_string<char>>::__destroy_vector::operator()[abi:ne190102]()  (in main) + 104  [0x102c01ad4]  vector:532
+                  ! : |   + ! 8 std::vector<std::basic_string<char>>::capacity[abi:ne190102]() const  (in main) + 28  [0x102c01bc4]  vector:638
+                  ! : |   + ! : 8 std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]() const  (in main) + 28  [0x102c01e94]  vector:975
+                  ! : |   + ! :   5 std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]() const  (in main) + 24  [0x102c01eb8]  compressed_pair.h:134
+                  ! : |   + ! :   | 5 std::__compressed_pair_elem<std::basic_string<char>*, 0, false>::__get[abi:ne190102]() const  (in main) + 0,8  [0x102c01ec4,0x102c01ecc]  compressed_pair.h:63
+                  ! : |   + ! :   2 std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]() const  (in main) + 24  [0x102c01eb8]  compressed_pair.h:134
+                  ! : |   + ! :   1 std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]() const  (in main) + 0  [0x102c01ea0]  compressed_pair.h:133
+                  ! : |   + ! 2 std::vector<std::basic_string<char>>::capacity[abi:ne190102]() const  (in main) + 12  [0x102c01bb4]  vector:637
+                  ! : |   + 3 std::vector<std::basic_string<char>>::__destroy_vector::operator()[abi:ne190102]()  (in main) + 64  [0x102c01aac]  vector:531
+                  ! : |   + ! 3 std::vector<std::basic_string<char>>::__annotate_delete[abi:ne190102]() const  (in main) + 4  [0x102c01b40]  vector:913
+                  ! : |   + 1 std::vector<std::basic_string<char>>::__destroy_vector::operator()[abi:ne190102]()  (in main) + 28  [0x102c01a88]  vector:529
+                  ! : |   + 1 std::vector<std::basic_string<char>>::__destroy_vector::operator()[abi:ne190102]()  (in main) + 44  [0x102c01a98]  vector:530
+                  ! : |   + 1 std::vector<std::basic_string<char>>::__destroy_vector::operator()[abi:ne190102]()  (in main) + 124  [0x102c01ae8]  vector:534
+                  ! : |   1 std::vector<std::basic_string<char>>::~vector[abi:ne190102]()  (in main) + 44  [0x102c01a20]  vector:541
+                  ! : 1 std::allocator<std::vector<std::basic_string<char>>>::destroy[abi:ne190102](std::vector<std::basic_string<char>>*)  (in main) + 28  [0x102c019bc]  allocator.h:168
+                  ! 1 std::allocator_traits<std::allocator<std::vector<std::basic_string<char>>>>::destroy[abi:ne190102]<std::vector<std::basic_string<char>>, 0>(std::allocator<std::vector<std::basic_string<char>>>&, std::vector<std::basic_string<char>>*)  (in main) + 4  [0x102c06494]
+                  ! 1 std::allocator_traits<std::allocator<std::vector<std::basic_string<char>>>>::destroy[abi:ne190102]<std::vector<std::basic_string<char>>, 0>(std::allocator<std::vector<std::basic_string<char>>>&, std::vector<std::basic_string<char>>*)  (in main) + 32  [0x102c01980]  allocator_traits.h:336
+                  1 std::vector<std::vector<std::basic_string<char>>>::__base_destruct_at_end[abi:ne190102](std::vector<std::basic_string<char>>*)  (in main) + 68  [0x102c0191c]  vector:985
+                    1 std::vector<std::vector<std::basic_string<char>>>::__alloc[abi:ne190102]()  (in main) + 0  [0x102c01870]  vector:965
+
+Total number in stack (recursive counted multiple, when >=5):
+        10       std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 24  [0x102c026f8]  compressed_pair.h:134
+        10       std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main) + 0  [0x102c02704]  compressed_pair.h:63
+        6       std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 0  [0x102c026e0]  compressed_pair.h:134
+        6       std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 0  [0x102c0265c]  string:1881
+        6       std::basic_string<char>::__is_long[abi:ne190102]() const  (in main) + 24  [0x102c02674]  string:1881
+        5       std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main) + 0  [0x102c026e0]  compressed_pair.h:133
+
+Sort by top of stack, same collapsed (when >= 5):
+        std::istreambuf_iterator<char>::__test_for_eof[abi:ne190102]() const  (in main)        141
+        std::basic_streambuf<char>::sbumpc[abi:ne190102]()  (in main)        125
+        std::char_traits<char>::to_int_type[abi:ne190102](char)  (in main)        101
+        std::basic_streambuf<char>::sgetc[abi:ne190102]()  (in main)        98
+        std::__compressed_pair_elem<std::basic_string<char>::__rep, 0, false>::__get[abi:ne190102]() const  (in main)        78
+        std::getline[abi:ne190102]<char>(std::basic_istream<char>&, std::basic_string<char>&, char)  (in main)        68
+        std::basic_string<char>::max_size[abi:ne190102]() const  (in main)        62
+        std::__compressed_pair<std::basic_string<char>::__rep>::first[abi:ne190102]() const  (in main)        60
+        std::char_traits<char>::eof[abi:ne190102]()  (in main)        60
+        std::basic_string<char>::push_back(char)  (in libc++.1.dylib)        56
+        std::char_traits<char>::eq_int_type[abi:ne190102](int, int)  (in main)        48
+        std::basic_string<char>::size[abi:ne190102]() const  (in main)        44
+        std::__libcpp_numeric_limits<unsigned long, true>::max[abi:ne190102]()  (in main)        39
+        std::allocator_traits<std::allocator<char>>::max_size[abi:ne190102]<std::allocator<char>, 0>(std::allocator<char> const&)  (in main)        39
+        std::basic_string<char>::__is_long[abi:ne190102]() const  (in main)        37
+        std::__compressed_pair_elem<std::allocator<char>, 1, true>::__get[abi:ne190102]() const  (in main)        33
+        std::ios_base::rdbuf[abi:ne190102]() const  (in main)        33
+        DYLD-STUB$$std::basic_string<char>::push_back(char)  (in main)        31
+        std::char_traits<char>::eq(char, char)  (in main)        31
+        std::basic_string<char>::__alloc[abi:ne190102]() const  (in main)        29
+        std::istreambuf_iterator<char>::equal[abi:ne190102](std::istreambuf_iterator<char> const&) const  (in main)        28
+        std::istreambuf_iterator<char>::operator++[abi:ne190102]()  (in main)        28
+        std::istreambuf_iterator<char>::operator*[abi:ne190102]() const  (in main)        27
+        std::allocator<char>::max_size[abi:ne190102]() const  (in main)        26
+        std::basic_ios<char>::rdbuf[abi:ne190102]() const  (in main)        26
+        std::_IterOps<std::_ClassicAlgPolicy>::__difference_type<std::istreambuf_iterator<char>> std::__count[abi:ne190102]<std::_ClassicAlgPolicy, std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char, std::__identity>(std::istreambuf_iterator<char>, std::istreambuf_iterator<char>, char const&, std::__identity&)  (in main)        25
+        decltype(std::declval<std::__identity&>()(std::declval<char>())) std::__invoke[abi:ne190102]<std::__identity&, char>(std::__identity&, char&&)  (in main)        24
+        std::__compressed_pair<std::basic_string<char>::__rep>::second[abi:ne190102]() const  (in main)        24
+        __read_nocancel  (in libsystem_kernel.dylib)        22
+        std::char_traits<char>::to_char_type[abi:ne190102](int)  (in main)        22
+        std::__identity::operator()[abi:ne190102]<char>(char&&) const  (in main)        20
+        _platform_memmove  (in libsystem_platform.dylib)        16
+        std::numeric_limits<unsigned long>::max[abi:ne190102]()  (in main)        16
+        std::operator!=[abi:ne190102]<char>(std::istreambuf_iterator<char> const&, std::istreambuf_iterator<char> const&)  (in main)        14
+        std::vector<std::basic_string<char>>::__construct_one_at_end[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>&&)  (in main)        14
+        std::basic_string<char>::__get_long_size[abi:ne190102]() const  (in main)        13
+        std::vector<std::basic_string<char>>::_ConstructTransaction::_ConstructTransaction[abi:ne190102](std::vector<std::basic_string<char>>&, unsigned long)  (in main)        13
+        nanov2_allocate_outlined  (in libsystem_malloc.dylib)        12
+        std::basic_string<char>::basic_string[abi:ne190102](std::basic_string<char>&&)  (in main)        11
+        std::vector<std::basic_string<char>>::__end_cap[abi:ne190102]()  (in main)        11
+        _nanov2_free  (in libsystem_malloc.dylib)        10
+        std::vector<std::basic_string<char>>::vector[abi:ne190102](std::vector<std::basic_string<char>>&&)  (in main)        10
+        std::enable_if<is_move_constructible<std::basic_string<char>*>::value && is_move_assignable<std::basic_string<char>*>::value, void>::type std::swap[abi:ne190102]<std::basic_string<char>*>(std::basic_string<char>*&, std::basic_string<char>*&)  (in main)        9
+        _free  (in libsystem_malloc.dylib)        8
+        std::basic_string<char>* std::__to_address[abi:ne190102]<std::basic_string<char>>(std::basic_string<char>*)  (in main)        8
+        std::basic_string<char>::basic_string(std::basic_string<char> const&, unsigned long, unsigned long const&)  (in libc++.1.dylib)        8
+        std::vector<std::vector<std::basic_string<char>>>::__construct_one_at_end[abi:ne190102]<std::vector<std::basic_string<char>>>(std::vector<std::basic_string<char>>&&)  (in main)        8
+        _platform_memchr  (in libsystem_platform.dylib)        7
+        nanov2_find_block_and_allocate  (in libsystem_malloc.dylib)        7
+        nanov2_malloc_type  (in libsystem_malloc.dylib)        7
+        std::basic_string<char>::~basic_string()  (in libc++.1.dylib)        7
+        std::vector<std::basic_string<char>>::__base_destruct_at_end[abi:ne190102](std::basic_string<char>*)  (in main)        7
+        std::vector<std::basic_string<char>>::__destroy_vector::operator()[abi:ne190102]()  (in main)        7
+        std::__compressed_pair<std::basic_string<char>*>::first[abi:ne190102]() const  (in main)        6
+        std::__compressed_pair<std::basic_string<char>*>::second[abi:ne190102]()  (in main)        6
+        std::__compressed_pair_elem<std::allocator<std::basic_string<char>>, 1, true>::__get[abi:ne190102]()  (in main)        6
+        std::vector<std::basic_string<char>>::_ConstructTransaction::~_ConstructTransaction[abi:ne190102]()  (in main)        6
+        std::vector<std::basic_string<char>>::push_back[abi:ne190102](std::basic_string<char>&&)  (in main)        6
+        CsvReader::readAll(std::vector<std::vector<std::basic_string<char>>>&)  (in main)        5
+        DYLD-STUB$$std::basic_string<char>::~basic_string()  (in main)        5
+        std::__compressed_pair_elem<std::basic_string<char>*, 0, false>::__get[abi:ne190102]() const  (in main)        5
+        std::__compressed_pair_elem<std::vector<std::basic_string<char>>*, 0, false>::__get[abi:ne190102]()  (in main)        5
+        std::__libcpp_allocate[abi:ne190102](unsigned long, unsigned long)  (in main)        5
+        std::allocator<char>::allocator[abi:ne190102]()  (in main)        5
+        std::basic_string<char>::__annotate_new[abi:ne190102](unsigned long) const  (in main)        5
+        std::basic_string<char>::substr[abi:ne190102](unsigned long, unsigned long) const  (in main)        5
+        std::vector<std::basic_string<char>>::__annotate_delete[abi:ne190102]() const  (in main)        5
+
+Binary Images:
+       0x102c00000 -        0x102c06e6b +main (0) <C20FA177-33E9-3FFD-A6E4-368708A04EAC> /Users/*/Desktop/*/main
+       0x1842f0000 -        0x184341ca3  libobjc.A.dylib (928.3) <B2882096-462B-3878-BE2A-410F7B1A27FD> /usr/lib/libobjc.A.dylib
+       0x184342000 -        0x1843c3f3f  dyld (1.0.0 - 1245.1) <398A133C-9BCB-317F-A064-A40D3CEA3C0F> /usr/lib/dyld
+       0x1843c4000 -        0x1843c7ff8  libsystem_blocks.dylib (95) <A33D811C-BD2D-3833-9C38-9BF3960A1F8C> /usr/lib/system/libsystem_blocks.dylib
+       0x1843c8000 -        0x184412fff  libxpc.dylib (2866.81.1) <564B7785-E7C4-3231-8BF1-3FBB266B6599> /usr/lib/system/libxpc.dylib
+       0x184413000 -        0x18442efff  libsystem_trace.dylib (1612.80.7) <7F5EC174-AB45-37E7-B783-83A04B6154A1> /usr/lib/system/libsystem_trace.dylib
+       0x18442f000 -        0x1844cefdf  libcorecrypto.dylib (1736.80.2) <8A08F4FE-C92E-35AA-BBB8-45A9D7A00AAD> /usr/lib/system/libcorecrypto.dylib
+       0x1844cf000 -        0x184510fff  libsystem_malloc.dylib (657.80.3) <1480B446-99F7-3757-9D4E-5BA3014A2726> /usr/lib/system/libsystem_malloc.dylib
+       0x184511000 -        0x184557fff  libdispatch.dylib (1504.60.7) <5576E4FD-AAD2-3608-8C8F-4EEC421236F9> /usr/lib/system/libdispatch.dylib
+       0x184558000 -        0x18455affb  libsystem_featureflags.dylib (94) <64FD190D-C0D7-3B9A-837B-E63EA386BE14> /usr/lib/system/libsystem_featureflags.dylib
+       0x18455b000 -        0x1845dcffb  libsystem_c.dylib (1669.60.4) <92699527-645F-3D8D-AED8-1CFB0C034E15> /usr/lib/system/libsystem_c.dylib
+       0x1845dd000 -        0x18466affb  libc++.1.dylib (1800.105) <BBAB286C-2E51-3D64-9AE3-A4102935FE32> /usr/lib/libc++.1.dylib
+       0x18466b000 -        0x184685fff  libc++abi.dylib (1800.105) <E7DBA219-4E97-307D-8E80-E0D97BE8517B> /usr/lib/libc++abi.dylib
+       0x184686000 -        0x1846c0ff7  libsystem_kernel.dylib (11215.81.4) <EEE9D0D3-DFFC-37CB-9CED-B27CD0286D8C> /usr/lib/system/libsystem_kernel.dylib
+       0x1846c1000 -        0x1846cdfff  libsystem_pthread.dylib (535) <642FAF7A-874E-37E6-8ABA-2B0CC09A3025> /usr/lib/system/libsystem_pthread.dylib
+       0x1846ce000 -        0x1846faffb  libdyld.dylib (1245.1) <C0C53058-94D2-3D9E-9E92-56BA8B43C327> /usr/lib/system/libdyld.dylib
+       0x1846fb000 -        0x184702feb  libsystem_platform.dylib (340.60.2) <984D08B8-F85C-36F5-9E17-5BFF7FC779A3> /usr/lib/system/libsystem_platform.dylib
+       0x184703000 -        0x184732ffb  libsystem_info.dylib (592) <8C7C4902-FEC1-3776-87FF-2373BA19B1CE> /usr/lib/system/libsystem_info.dylib
+       0x187e19000 -        0x187e23ff7  libsystem_darwin.dylib (1669.60.4) <F23DCA7C-AF18-3BB9-9D2F-FFBC4645DDC1> /usr/lib/system/libsystem_darwin.dylib
+       0x18827c000 -        0x18828efff  libsystem_notify.dylib (327.60.1) <A3EE7CB1-6FCC-37AB-A8BC-256B9642B47D> /usr/lib/system/libsystem_notify.dylib
+       0x18a22a000 -        0x18a244ff7  libsystem_networkextension.dylib (2063.80.10) <CD0C82E0-9B1B-3CAA-8CA7-466D1C439C3B> /usr/lib/system/libsystem_networkextension.dylib
+       0x18a2c0000 -        0x18a2d8ffb  libsystem_asl.dylib (402) <26693E85-AFDC-38E2-B939-D6EC865FA506> /usr/lib/system/libsystem_asl.dylib
+       0x18bdc9000 -        0x18bdd1fff  libsystem_symptoms.dylib (2001.80.5) <695D143C-5D59-37B0-8784-4AE727AFEEF5> /usr/lib/system/libsystem_symptoms.dylib
+       0x18f526000 -        0x18f554ff7  libsystem_containermanager.dylib (689) <A72C2FD5-969A-342F-B8A4-4216D7C7957E> /usr/lib/system/libsystem_containermanager.dylib
+       0x190763000 -        0x190767fff  libsystem_configuration.dylib (1351.80.2) <C218F939-9E60-37A3-B2EC-93837054946D> /usr/lib/system/libsystem_configuration.dylib
+       0x190768000 -        0x19076efff  libsystem_sandbox.dylib (2401.81.2) <BF38E17B-6A57-3EE2-A805-8E9B35542182> /usr/lib/system/libsystem_sandbox.dylib
+       0x191680000 -        0x191682ffb  libquarantine.dylib (181.80.2) <90D46A44-087C-3900-8509-EA90C6CFAD58> /usr/lib/system/libquarantine.dylib
+       0x191d8f000 -        0x191d95ffb  libsystem_coreservices.dylib (171.1) <579E4601-365D-346F-9CD9-37851FB2874C> /usr/lib/system/libsystem_coreservices.dylib
+       0x1921fc000 -        0x192239fff  libsystem_m.dylib (3289) <1B9E3C19-420A-38C5-96CE-6C2CE6EB56BA> /usr/lib/system/libsystem_m.dylib
+       0x19223b000 -        0x19223eff7  libmacho.dylib (1022.1) <9E0F73E3-1865-3F72-9ED1-465C68D23BA6> /usr/lib/system/libmacho.dylib
+       0x19225c000 -        0x192269fff  libcommonCrypto.dylib (600033.60.1) <1C8E15A6-869F-3AAD-AAE8-5825C7C4F902> /usr/lib/system/libcommonCrypto.dylib
+       0x19226a000 -        0x192275fff  libunwind.dylib (1800.85) <BEFBB85F-B46E-3C52-9A92-2F8EE957E3D9> /usr/lib/system/libunwind.dylib
+       0x192276000 -        0x19227dfff  liboah.dylib (342) <D8407F3E-5522-3C66-8A60-C29567136FD5> /usr/lib/liboah.dylib
+       0x19227e000 -        0x192288ff7  libcopyfile.dylib (213.40.2) <0D18978A-4446-31EE-8228-25FABB44DB94> /usr/lib/system/libcopyfile.dylib
+       0x192289000 -        0x19228cfff  libcompiler_rt.dylib (103.3) <F22CE10B-B1DF-3A58-9B8B-7F0ED73962DF> /usr/lib/system/libcompiler_rt.dylib
+       0x19228d000 -        0x192291ffb  libsystem_collections.dylib (1669.60.4) <74DC56B7-7BE5-3392-835A-7C6863986FF2> /usr/lib/system/libsystem_collections.dylib
+       0x192292000 -        0x192295ffb  libsystem_secinit.dylib (153.60.1) <9BFA7CCC-E31E-3D39-832D-CA425269A795> /usr/lib/system/libsystem_secinit.dylib
+       0x192296000 -        0x192298fff  libremovefile.dylib (75.80.1) <D242539B-BA45-363C-8B08-83FBCE4EC1C2> /usr/lib/system/libremovefile.dylib
+       0x192299000 -        0x192299fff  libkeymgr.dylib (31) <95E4D67C-51BF-36C9-99B5-35F5E2D6E2CA> /usr/lib/system/libkeymgr.dylib
+       0x19229a000 -        0x1922a2fff  libsystem_dnssd.dylib (2559.80.8) <35DE5A07-AF58-33F0-A950-1F7CCAE85F3E> /usr/lib/system/libsystem_dnssd.dylib
+       0x1922a3000 -        0x1922a8ffb  libcache.dylib (95) <46788F12-8B07-3253-BF23-C49BC753A327> /usr/lib/system/libcache.dylib
+       0x1922a9000 -        0x1922aaffb  libSystem.B.dylib (1351) <E7A14776-89AB-310A-9FCF-F47CAE8043B6> /usr/lib/libSystem.B.dylib
+       0x2652a2000 -        0x2652a5fff  libsystem_darwindirectory.dylib (122) <E3036CCB-95CF-3BD6-AA4F-58543B923EA5> /usr/lib/system/libsystem_darwindirectory.dylib
+       0x2652a6000 -        0x2652acfff  libsystem_eligibility.dylib (160.60.1) <4C8AC363-F171-3A08-85F8-7542B9C79A87> /usr/lib/system/libsystem_eligibility.dylib
+       0x2652ad000 -        0x2652b2fff  libsystem_sanitizers.dylib (17.1) <F0A7379E-6861-3B3F-BB56-1B08B1BEE98A> /usr/lib/system/libsystem_sanitizers.dylib
