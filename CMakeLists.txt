@@ -8,5 +8,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #flags for profiling
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 
-add_executable(main main.cpp CsvReader.cpp)
+add_executable(main main.cpp CsvReader.cpp DataVisualizer.cpp Backtester.cpp MovingAverageCrossover.cpp Portfolio.cpp)
+
 

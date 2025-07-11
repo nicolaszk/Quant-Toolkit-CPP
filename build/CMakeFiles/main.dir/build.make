@@ -100,19 +100,83 @@ CMakeFiles/main.dir/CsvReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/CsvReader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zk/Desktop/2025_2/cpp/CsvReader.cpp -o CMakeFiles/main.dir/CsvReader.cpp.s
 
+CMakeFiles/main.dir/DataVisualizer.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/DataVisualizer.cpp.o: /Users/zk/Desktop/2025_2/cpp/DataVisualizer.cpp
+CMakeFiles/main.dir/DataVisualizer.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zk/Desktop/2025_2/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/DataVisualizer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/DataVisualizer.cpp.o -MF CMakeFiles/main.dir/DataVisualizer.cpp.o.d -o CMakeFiles/main.dir/DataVisualizer.cpp.o -c /Users/zk/Desktop/2025_2/cpp/DataVisualizer.cpp
+
+CMakeFiles/main.dir/DataVisualizer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/DataVisualizer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zk/Desktop/2025_2/cpp/DataVisualizer.cpp > CMakeFiles/main.dir/DataVisualizer.cpp.i
+
+CMakeFiles/main.dir/DataVisualizer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/DataVisualizer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zk/Desktop/2025_2/cpp/DataVisualizer.cpp -o CMakeFiles/main.dir/DataVisualizer.cpp.s
+
+CMakeFiles/main.dir/Backtester.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Backtester.cpp.o: /Users/zk/Desktop/2025_2/cpp/Backtester.cpp
+CMakeFiles/main.dir/Backtester.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zk/Desktop/2025_2/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/Backtester.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/Backtester.cpp.o -MF CMakeFiles/main.dir/Backtester.cpp.o.d -o CMakeFiles/main.dir/Backtester.cpp.o -c /Users/zk/Desktop/2025_2/cpp/Backtester.cpp
+
+CMakeFiles/main.dir/Backtester.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/Backtester.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zk/Desktop/2025_2/cpp/Backtester.cpp > CMakeFiles/main.dir/Backtester.cpp.i
+
+CMakeFiles/main.dir/Backtester.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/Backtester.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zk/Desktop/2025_2/cpp/Backtester.cpp -o CMakeFiles/main.dir/Backtester.cpp.s
+
+CMakeFiles/main.dir/MovingAverageCrossover.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/MovingAverageCrossover.cpp.o: /Users/zk/Desktop/2025_2/cpp/MovingAverageCrossover.cpp
+CMakeFiles/main.dir/MovingAverageCrossover.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zk/Desktop/2025_2/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/MovingAverageCrossover.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/MovingAverageCrossover.cpp.o -MF CMakeFiles/main.dir/MovingAverageCrossover.cpp.o.d -o CMakeFiles/main.dir/MovingAverageCrossover.cpp.o -c /Users/zk/Desktop/2025_2/cpp/MovingAverageCrossover.cpp
+
+CMakeFiles/main.dir/MovingAverageCrossover.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/MovingAverageCrossover.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zk/Desktop/2025_2/cpp/MovingAverageCrossover.cpp > CMakeFiles/main.dir/MovingAverageCrossover.cpp.i
+
+CMakeFiles/main.dir/MovingAverageCrossover.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/MovingAverageCrossover.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zk/Desktop/2025_2/cpp/MovingAverageCrossover.cpp -o CMakeFiles/main.dir/MovingAverageCrossover.cpp.s
+
+CMakeFiles/main.dir/Portfolio.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Portfolio.cpp.o: /Users/zk/Desktop/2025_2/cpp/Portfolio.cpp
+CMakeFiles/main.dir/Portfolio.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zk/Desktop/2025_2/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/Portfolio.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/Portfolio.cpp.o -MF CMakeFiles/main.dir/Portfolio.cpp.o.d -o CMakeFiles/main.dir/Portfolio.cpp.o -c /Users/zk/Desktop/2025_2/cpp/Portfolio.cpp
+
+CMakeFiles/main.dir/Portfolio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/Portfolio.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zk/Desktop/2025_2/cpp/Portfolio.cpp > CMakeFiles/main.dir/Portfolio.cpp.i
+
+CMakeFiles/main.dir/Portfolio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/Portfolio.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zk/Desktop/2025_2/cpp/Portfolio.cpp -o CMakeFiles/main.dir/Portfolio.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
-"CMakeFiles/main.dir/CsvReader.cpp.o"
+"CMakeFiles/main.dir/CsvReader.cpp.o" \
+"CMakeFiles/main.dir/DataVisualizer.cpp.o" \
+"CMakeFiles/main.dir/Backtester.cpp.o" \
+"CMakeFiles/main.dir/MovingAverageCrossover.cpp.o" \
+"CMakeFiles/main.dir/Portfolio.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/CsvReader.cpp.o
+main: CMakeFiles/main.dir/DataVisualizer.cpp.o
+main: CMakeFiles/main.dir/Backtester.cpp.o
+main: CMakeFiles/main.dir/MovingAverageCrossover.cpp.o
+main: CMakeFiles/main.dir/Portfolio.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/zk/Desktop/2025_2/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/zk/Desktop/2025_2/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

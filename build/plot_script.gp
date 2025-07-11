@@ -1,0 +1,6 @@
+set terminal pngcairo enhanced font 'Verdana,10'
+set output 'price_chart.png'
+set title 'Price History'
+set xlabel 'Time (Index)'
+set ylabel 'Price'
+plot 'plot_data.dat' with lines title 'Price'

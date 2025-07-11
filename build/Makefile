@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+Backtester.o: Backtester.cpp.o
+.PHONY : Backtester.o
+
+# target to build an object file
+Backtester.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Backtester.cpp.o
+.PHONY : Backtester.cpp.o
+
+Backtester.i: Backtester.cpp.i
+.PHONY : Backtester.i
+
+# target to preprocess a source file
+Backtester.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Backtester.cpp.i
+.PHONY : Backtester.cpp.i
+
+Backtester.s: Backtester.cpp.s
+.PHONY : Backtester.s
+
+# target to generate assembly for a file
+Backtester.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Backtester.cpp.s
+.PHONY : Backtester.cpp.s
+
 CsvReader.o: CsvReader.cpp.o
 .PHONY : CsvReader.o
 
@@ -152,6 +176,78 @@ CsvReader.s: CsvReader.cpp.s
 CsvReader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/CsvReader.cpp.s
 .PHONY : CsvReader.cpp.s
+
+DataVisualizer.o: DataVisualizer.cpp.o
+.PHONY : DataVisualizer.o
+
+# target to build an object file
+DataVisualizer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/DataVisualizer.cpp.o
+.PHONY : DataVisualizer.cpp.o
+
+DataVisualizer.i: DataVisualizer.cpp.i
+.PHONY : DataVisualizer.i
+
+# target to preprocess a source file
+DataVisualizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/DataVisualizer.cpp.i
+.PHONY : DataVisualizer.cpp.i
+
+DataVisualizer.s: DataVisualizer.cpp.s
+.PHONY : DataVisualizer.s
+
+# target to generate assembly for a file
+DataVisualizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/DataVisualizer.cpp.s
+.PHONY : DataVisualizer.cpp.s
+
+MovingAverageCrossover.o: MovingAverageCrossover.cpp.o
+.PHONY : MovingAverageCrossover.o
+
+# target to build an object file
+MovingAverageCrossover.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MovingAverageCrossover.cpp.o
+.PHONY : MovingAverageCrossover.cpp.o
+
+MovingAverageCrossover.i: MovingAverageCrossover.cpp.i
+.PHONY : MovingAverageCrossover.i
+
+# target to preprocess a source file
+MovingAverageCrossover.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MovingAverageCrossover.cpp.i
+.PHONY : MovingAverageCrossover.cpp.i
+
+MovingAverageCrossover.s: MovingAverageCrossover.cpp.s
+.PHONY : MovingAverageCrossover.s
+
+# target to generate assembly for a file
+MovingAverageCrossover.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MovingAverageCrossover.cpp.s
+.PHONY : MovingAverageCrossover.cpp.s
+
+Portfolio.o: Portfolio.cpp.o
+.PHONY : Portfolio.o
+
+# target to build an object file
+Portfolio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Portfolio.cpp.o
+.PHONY : Portfolio.cpp.o
+
+Portfolio.i: Portfolio.cpp.i
+.PHONY : Portfolio.i
+
+# target to preprocess a source file
+Portfolio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Portfolio.cpp.i
+.PHONY : Portfolio.cpp.i
+
+Portfolio.s: Portfolio.cpp.s
+.PHONY : Portfolio.s
+
+# target to generate assembly for a file
+Portfolio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Portfolio.cpp.s
+.PHONY : Portfolio.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -186,9 +282,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... Backtester.o"
+	@echo "... Backtester.i"
+	@echo "... Backtester.s"
 	@echo "... CsvReader.o"
 	@echo "... CsvReader.i"
 	@echo "... CsvReader.s"
+	@echo "... DataVisualizer.o"
+	@echo "... DataVisualizer.i"
+	@echo "... DataVisualizer.s"
+	@echo "... MovingAverageCrossover.o"
+	@echo "... MovingAverageCrossover.i"
+	@echo "... MovingAverageCrossover.s"
+	@echo "... Portfolio.o"
+	@echo "... Portfolio.i"
+	@echo "... Portfolio.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

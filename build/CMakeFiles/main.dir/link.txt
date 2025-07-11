@@ -1,1 +1,1 @@
-/usr/bin/c++  -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/CsvReader.cpp.o -o main
+/usr/bin/c++  -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/CsvReader.cpp.o CMakeFiles/main.dir/DataVisualizer.cpp.o CMakeFiles/main.dir/Backtester.cpp.o CMakeFiles/main.dir/MovingAverageCrossover.cpp.o CMakeFiles/main.dir/Portfolio.cpp.o -o main
