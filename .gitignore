@@ -32,6 +32,13 @@
 *.a
 *.lib
 
+# Makefiles
+Makefile
+*.mk
+**/Makefile
+**/*.mk
+
+
 # Executables
 *.exe
 *.out
